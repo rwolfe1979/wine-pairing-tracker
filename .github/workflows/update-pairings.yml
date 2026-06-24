@@ -1,0 +1,42 @@
+name: Update Wine Pairings
+
+on:
+  schedule:
+    # Every Monday at 9am Eastern (2pm UTC)
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+    # Also allows manual trigger from the Actions tab
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # needed to commit and push
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests anthropic
+
+      - name: Run pairing updater
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/update_pairings.py
+
+      - name: Commit and push updated data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "Wine Pairing Bot"
+          git add pairings-data.json index.html
+          git diff --staged --quiet && echo "Nothing new to commit." || \
+            git commit -m "Weekly update: $(date '+%Y-%m-%d') — new pairings from @samanthasommelier"
+          git push

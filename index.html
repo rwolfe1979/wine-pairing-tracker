@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam the Sommelier — Wine & Snack Pairings</title>
+<style>
+:root {
+  --burgundy: #6B1E3C;
+  --burgundy-dark: #4A0E28;
+  --cream: #FDF8F3;
+  --cream-dark: #F5EDE0;
+  --card-bg: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --red-wine: #8B1A2B;
+  --white-wine: #C9A84C;
+  --rose-wine: #E8729A;
+  --sparkling-wine: #4A9B8E;
+  --orange-wine: #D4691E;
+  --unknown-wine: #888;
+  --tj-red: #C0392B;
+  --costco-navy: #003DA5;
+  --aldi-blue: #00529F;
+  --other-gray: #607D8B;
+  --loved: #27AE60;
+  --liked: #2980B9;
+  --meh: #F39C12;
+  --disliked: #E74C3C;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 28px rgba(107,30,60,0.15);
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--cream);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* HEADER */
+.site-header {
+  background: linear-gradient(135deg, var(--burgundy-dark) 0%, var(--burgundy) 100%);
+  color: white;
+  padding: 28px 24px 20px;
+  text-align: center;
+}
+.site-header h1 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.site-header .subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.stat-chip {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.stat-chip span { opacity: 0.8; font-weight: 400; }
+
+/* SAMS PICKS */
+.sams-picks {
+  background: var(--cream-dark);
+  border-bottom: 1px solid #E8D8C8;
+  padding: 16px 20px;
+}
+.sams-picks h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--burgundy);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.picks-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+.pick-chip {
+  flex-shrink: 0;
+  background: white;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  max-width: 200px;
+  text-align: left;
+}
+.pick-chip:hover { border-color: var(--burgundy); box-shadow: var(--shadow); }
+.pick-chip .pick-wine {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pick-chip .pick-food {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pick-chip .pick-likes {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* CONTROLS */
+.controls {
+  background: white;
+  border-bottom: 1px solid #E8D8C8;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+#searchInput {
+  flex: 1;
+  padding: 9px 14px;
+  border: 1.5px solid #DDD;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#searchInput:focus { border-color: var(--burgundy); }
+.sort-select {
+  padding: 9px 10px;
+  border: 1.5px solid #DDD;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+.sort-select:focus { border-color: var(--burgundy); }
+.filter-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-chip {
+  padding: 4px 11px;
+  border-radius: 16px;
+  border: 1.5px solid #DDD;
+  background: white;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.filter-chip:hover { border-color: var(--burgundy); color: var(--burgundy); }
+.filter-chip.active {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+  color: white;
+}
+.filter-divider {
+  width: 1px;
+  height: 20px;
+  background: #DDD;
+  flex-shrink: 0;
+}
+.toggle-row {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.toggle-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+.toggle-label input { cursor: pointer; accent-color: var(--burgundy); }
+
+/* GRID */
+.grid-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.results-info {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+}
+@media (max-width: 640px) {
+  .cards-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* CARD */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+.card.muted { opacity: 0.65; }
+
+/* IMAGE */
+.card-image-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #EEE;
+  overflow: hidden;
+}
+.card-image-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.badge-row {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  gap: 5px;
+  pointer-events: none;
+}
+.badge {
+  padding: 3px 9px;
+  border-radius: 12px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: white;
+  white-space: nowrap;
+}
+.badge-type-Red { background: var(--red-wine); }
+.badge-type-White { background: var(--white-wine); color: #1a1a1a; }
+.badge-type-Rosé { background: var(--rose-wine); }
+.badge-type-Sparkling { background: var(--sparkling-wine); }
+.badge-type-Orange { background: var(--orange-wine); }
+.badge-type-Unknown { background: var(--unknown-wine); }
+.badge-store-TJ { background: var(--tj-red); }
+.badge-store-Costco { background: var(--costco-navy); }
+.badge-store-Aldi { background: var(--aldi-blue); }
+.badge-store-Other { background: var(--other-gray); }
+
+/* Slideshow */
+.slideshow-wrap { position: relative; }
+.slideshow-wrap img { transition: opacity 0.3s; }
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: white;
+  border: none;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  z-index: 2;
+}
+.slide-nav:hover { background: rgba(0,0,0,0.7); }
+.slide-prev { left: 6px; }
+.slide-next { right: 6px; }
+.slide-dots {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  z-index: 2;
+}
+.slide-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.slide-dot.active { background: white; }
+
+/* CARD BODY */
+.card-body {
+  padding: 12px 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card-wine {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+}
+.card-food {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+}
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.card-engagement { display: flex; gap: 10px; }
+
+/* RATINGS */
+.ratings-section {
+  border-top: 1px solid #F0E8DE;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.rating-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  min-width: 52px;
+  white-space: nowrap;
+}
+.rating-btns { display: flex; gap: 4px; flex-wrap: wrap; }
+.rating-btn {
+  padding: 3px 9px;
+  border-radius: 12px;
+  border: 1.5px solid #DDD;
+  background: white;
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--text-secondary);
+}
+.rating-btn:hover { border-color: #AAA; }
+.rating-btn.active-loved { background: var(--loved); border-color: var(--loved); color: white; }
+.rating-btn.active-liked { background: var(--liked); border-color: var(--liked); color: white; }
+.rating-btn.active-meh { background: var(--meh); border-color: var(--meh); color: white; }
+.rating-btn.active-disliked { background: var(--disliked); border-color: var(--disliked); color: white; }
+
+/* NOTES */
+.notes-section {
+  padding: 0 14px 10px;
+}
+.notes-toggle {
+  font-size: 0.75rem;
+  color: var(--burgundy);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+}
+.notes-area {
+  width: 100%;
+  margin-top: 6px;
+  padding: 7px 9px;
+  border: 1.5px solid #DDD;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  min-height: 60px;
+  transition: border-color 0.2s;
+}
+.notes-area:focus { border-color: var(--burgundy); }
+
+/* CARD FOOTER */
+.card-footer {
+  padding: 8px 14px 12px;
+  border-top: 1px solid #F0E8DE;
+}
+.tiktok-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #010101;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  width: 100%;
+  justify-content: center;
+}
+.tiktok-btn:hover { opacity: 0.85; }
+
+/* SHOPPING LIST SIDEBAR */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  border-radius: 28px;
+  padding: 12px 20px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(107,30,60,0.35);
+  transition: all 0.2s;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.fab:hover { background: var(--burgundy-dark); transform: translateY(-2px); }
+.fab-badge {
+  background: white;
+  color: var(--burgundy);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+.sidebar-overlay.open { opacity: 1; pointer-events: all; }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -380px;
+  width: 360px;
+  max-width: 95vw;
+  height: 100vh;
+  background: white;
+  z-index: 301;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+  transition: right 0.3s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+}
+.sidebar.open { right: 0; }
+
+.sidebar-header {
+  background: var(--burgundy);
+  color: white;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-header h2 { font-size: 1.05rem; }
+.sidebar-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+}
+.sidebar-close:hover { opacity: 1; }
+
+.sidebar-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+.sidebar-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 40px 20px;
+}
+.store-group { margin-bottom: 20px; }
+.store-group-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--burgundy);
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--cream-dark);
+}
+.list-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #F0E8DE;
+}
+.list-item:last-child { border-bottom: none; }
+.list-wine { font-size: 0.82rem; font-weight: 700; color: var(--text-primary); }
+.list-food { font-size: 0.76rem; color: var(--text-secondary); }
+.list-rating { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+.empty-state .emoji { font-size: 3rem; margin-bottom: 12px; }
+.empty-state p { font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>🍷 Sam the Sommelier</h1>
+  <p class="subtitle">Wine &amp; Snack Pairings Tracker · <a href="https://www.tiktok.com/@samanthasommelier" target="_blank" style="color:rgba(255,255,255,0.75);text-decoration:none;">@samanthasommelier</a> on TikTok</p>
+  <div class="stats-bar">
+    <div class="stat-chip" id="statTotal">⏳ Loading...</div>
+    <div class="stat-chip" id="statTried">🍽️ <span>0</span> tried</div>
+    <div class="stat-chip" id="statLiked">💚 <span>0</span> liked</div>
+    <div class="stat-chip" id="statDisliked">👎 <span>0</span> not liked</div>
+  </div>
+</header>
+
+<section class="sams-picks" id="samsPicksSection">
+  <h2>⭐ Sam's Most Popular Pairings</h2>
+  <div class="picks-scroll" id="picksList"></div>
+</section>
+
+<div class="controls">
+  <div class="search-row">
+    <input type="text" id="searchInput" placeholder="Search wine or food…" autocomplete="off">
+    <select class="sort-select" id="sortSelect">
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+      <option value="popular">Most Popular</option>
+      <option value="liked">Liked First</option>
+    </select>
+  </div>
+  <div class="filter-row" id="storeFilters">
+    <button class="filter-chip active" data-group="store" data-value="all">All Stores</button>
+    <button class="filter-chip" data-group="store" data-value="Trader Joe's">TJ's</button>
+    <button class="filter-chip" data-group="store" data-value="Costco">Costco</button>
+    <button class="filter-chip" data-group="store" data-value="Aldi">Aldi</button>
+    <button class="filter-chip" data-group="store" data-value="other">Other</button>
+    <div class="filter-divider"></div>
+    <button class="filter-chip active" data-group="type" data-value="all">All Types</button>
+    <button class="filter-chip" data-group="type" data-value="Red">Red</button>
+    <button class="filter-chip" data-group="type" data-value="White">White</button>
+    <button class="filter-chip" data-group="type" data-value="Rosé">Rosé</button>
+    <button class="filter-chip" data-group="type" data-value="Sparkling">Sparkling</button>
+    <button class="filter-chip" data-group="type" data-value="Orange">Orange</button>
+    <div class="filter-divider"></div>
+    <button class="filter-chip active" data-group="status" data-value="all">All</button>
+    <button class="filter-chip" data-group="status" data-value="untried">Untried</button>
+    <button class="filter-chip" data-group="status" data-value="tried">Tried</button>
+    <button class="filter-chip" data-group="status" data-value="liked">Liked</button>
+    <button class="filter-chip" data-group="status" data-value="notliked">Not Liked</button>
+  </div>
+  <div class="toggle-row">
+    <label class="toggle-label">
+      <input type="checkbox" id="showAllToggle"> Show non-pairing posts
+    </label>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="results-info" id="resultsInfo"></div>
+  <div class="cards-grid" id="cardsGrid"></div>
+  <div class="empty-state" id="emptyState" style="display:none;">
+    <div class="emoji">🔍</div>
+    <p>No pairings match your filters. Try adjusting your search!</p>
+  </div>
+</div>
+
+<!-- Shopping List FAB -->
+<button class="fab" id="shoppingFab" onclick="openSidebar()">
+  🛒 Shopping List <span class="fab-badge" id="fabBadge">0</span>
+</button>
+
+<!-- Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>🛒 Shopping List</h2>
+    <button class="sidebar-close" onclick="closeSidebar()">×</button>
+  </div>
+  <div class="sidebar-body" id="sidebarBody">
+    <div class="sidebar-empty">Mark pairings as "Loved it" or "Liked it" to build your list!</div>
+  </div>
+</div>
+
+<script>
+const PAIRINGS_DATA = [{"id":"7618046421895302414","text":"this pairing will get you though your work week 🥹❤️\n\n🍷Famille Perrin Côtes du Rhône Réserve Blanc + Tortilla Rolled Ranch Chips + Everything & the Elote Greek Dip\n\n—> if you've been loving my wine pairings and unhinged energy here on social media, I truly belive you will love the @samsommwineclub !! \n\nIt's a space that  exists to build community, spark joy, and celebrate the little and big things. We're not waiting for the weekend. We're romanticizing life and toasting the micro joys… NOW 🎉\n\nIf you've felt seen here, if you love the vibe, and you've been thinking \"I want to sip with her every month\" this is\nyour sign. I'd love to send you a discount code to join the fun!! Let me know ❤️🍷\n\n#sommelier #traderjoesmusthaves #traderjoeswine #winepairing ","date":"2026-03-17T02:31:14.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7618046421895302414","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":5430,"views":93700,"hashtags":[],"wine":"Famille Perrin Côtes du Rhône Réserve Blanc","food":"Tortilla Rolled Ranch Chips + Everything & the Elote Greek Dip","store":"Unknown","wineType":"Red"},{"id":"7540110007182904590","text":"blessed 🥲 @tacobell #tbell #tacobell ","date":"2025-08-19T01:58:18.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7540110007182904590","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":35400,"views":413500,"hashtags":[],"wine":"Unknown","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7324394247459802411","text":"#traderjoeswine #winetikiok #cacioepepe #pastaandwine  ","date":"2024-01-15T18:30:52.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7324394247459802411","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":27700,"views":345100,"hashtags":[],"wine":"Unknown","food":"Cacio e Pepe","store":"Unknown","wineType":"Unknown"},{"id":"7654772164524100877","text":"aldi cuties this one's for you!!!! it's one of my most affordable wine & snack pairings to date, I hope you love 🩷\n\n🥂 Mimo Moutinho Vinho Verde $5.45 + Clancy Fried Pickle Ranch Potato Chips + Fried Pickle & Ranch Dip\n\n#aldi #aldiwine #winepairing #wineclub #winetiktok🍷 @ALDI USA @Aldi UK @ALDI_SUISSE ","date":"2026-06-24T01:45:43.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7654772164524100877","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":611,"views":7354,"hashtags":[],"wine":"Mimo Moutinho Vinho Verde","food":"Clancy Fried Pickle Ranch Potato Chips + Fried Pickle & Ranch Dip","store":"Aldi","wineType":"White"},{"id":"7654400348412562701","text":"","date":"2026-06-23T01:43:05.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7654400348412562701","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/a024a16127d44baa898047413b8082c4~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=cORBWKg9NaaRiqwU7o1L0S0cStg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1","https://p16-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/6a9e59c1539e4eed92de9217ff5fe350~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=xBWCU32GK8lPuGOlabYIdvyk4T4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"],"likes":904,"views":11700,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Trader Joe's","wineType":"Unknown"},{"id":"7652562985243725070","text":"tonight's order: Nacho Supreme Dip, Cheesy Bean & Rice Burrito ( always ), Mexican Pizza 🙌🏼 paired with an Aperol Spritz 🥂 allllll the fire sauce 🔥 \n\n#tacobell #aperolspritztime #tbell  @tacobell ","date":"2026-06-18T02:53:11.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7652562985243725070","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":728,"views":41500,"hashtags":[],"wine":"Aperol Spritz","food":"Nacho Supreme Dip / Mexican Pizza","store":"Unknown","wineType":"Sparkling"},{"id":"7652433024302222606","text":"#onthisday ","date":"2026-06-17T18:29:00.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7652433024302222606","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":69,"views":3030,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7652068180772310285","text":"sniffs wine","date":"2026-06-16T18:53:05.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7652068180772310285","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":660,"views":8163,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7651757574487805198","text":"all under $20, easy to find, and Certified Sommelier Approved","date":"2026-06-15T22:47:46.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7651757574487805198","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p16-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/0f0859d0b7d143abadcbc7030582abe3~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=fq2wO7rp6e9AXqiiH4CN8G3H5NU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1","https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/b9b27d6be2b643ef8a984e52c5c8396b~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=pANJGYudbNoY7q1Z8ZH55%2FQ9U6I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"],"likes":245,"views":5070,"hashtags":[],"wine":"Various Spritzes","food":"Various Snacks","store":"Unknown","wineType":"Sparkling"},{"id":"7651371370625977614","text":"as @gagebriney would say… SHE IS FRUITY & FERAL","date":"2026-06-14T21:49:08.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7651371370625977614","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":7328,"views":94900,"hashtags":[],"wine":"2025 Ruggero di Bardo Susumaniello Rosato","food":"Corn Bread Crisps + Unexpected Hatch Chili Spread + Pickled Jalapeños","store":"Unknown","wineType":"Rosé"},{"id":"7650701605523803406","text":"which pairing are you trying first?!?","date":"2026-06-13T02:30:04.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7650701605523803406","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p16-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/a33fa9a106f747659c7a4672f57aabd9~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=1rblAn0U50jmV5DupAWCLtauEXc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1","https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/792b3f7281704c368e573edd02bd10f6~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=MTTmw%2B74GgRiBIMDtJHQK8n6zCI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"],"likes":319,"views":7085,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7650329546444639501","text":"fun fact, I am an 805 simi valley girly born and raised","date":"2026-06-12T02:26:24.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7650329546444639501","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/f93106fa63c14fbc9c0164379d9e461a~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=UXJnHnCcKRVSt0xepjEGhcNfg9s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"],"likes":194,"views":6282,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7649617364220153101","text":"#onthisday ","date":"2026-06-10T04:22:27.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7649617364220153101","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":185,"views":6143,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7649616383428414733","text":"please don't break promises to yourselves","date":"2026-06-10T04:18:40.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7649616383428414733","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":3211,"views":58100,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7649082138402262286","text":"sorry i've been on a constant tj's couch crusher pairing saga","date":"2026-06-08T17:45:50.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7649082138402262286","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":3943,"views":57300,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Trader Joe's","wineType":"Unknown"},{"id":"7647581369270357261","text":"#onthisday ","date":"2026-06-04T16:41:59.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7647581369270357261","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":1394,"views":16700,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7647225659592281358","text":"i may not be able to have an Italian summer but I shall bring the Italian summer to me","date":"2026-06-03T17:41:38.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7647225659592281358","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/1048dbf2244144f483952ba2658a44cf~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=iWYHlmpjpSw0v6rv9Y8vulmR6gY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"],"likes":749,"views":13400,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7646242265832246542","text":"if I can't have an Almafi coast summer i'll bring it to me!!!","date":"2026-06-01T02:05:29.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7646242265832246542","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":8153,"views":70700,"hashtags":[],"wine":"Limoncello Spritz (Pallini Limoncello + Valdobbiadene Prosecco)","food":"TJ's Patio Potato Chips + Caramelized Onion Dip","store":"Trader Joe's","wineType":"Sparkling"},{"id":"7644695519347952909","text":"stay soft and kind","date":"2026-05-27T22:03:25.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7644695519347952909","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":1955,"views":37400,"hashtags":[],"wine":"Wölffer Estate Summer in a Bottle Rosé","food":"Unknown","store":"Unknown","wineType":"Rosé"},{"id":"7644390059516398861","text":"tj's gets the credit for this recipe but i'll take the wine pairing credit","date":"2026-05-27T02:17:57.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7644390059516398861","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":4394,"views":88500,"hashtags":[],"wine":"Sauvignon Republic New Zealand Sauvignon Blanc","food":"Bruschetta / Feta / Lentil Dip","store":"Trader Joe's","wineType":"White"},{"id":"7644272565741047054","text":"not to be dramatic but this pairing altered my brain chemistry","date":"2026-05-26T18:42:18.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7644272565741047054","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":3092,"views":44400,"hashtags":[],"wine":"Sauvignon Republic Sauvignon Blanc","food":"Ketchup Flavored Potato Chips + Caramelized Onion Dip + Hot Honey Mustard","store":"Trader Joe's","wineType":"White"},{"id":"7643194236938112270","text":"no I don't want a f*cking matcha date","date":"2026-05-23T20:57:44.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7643194236938112270","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":2537,"views":42300,"hashtags":[],"wine":"Sauvignon Blanc Slushie","food":"Taco Bell","store":"Unknown","wineType":"White"},{"id":"7643188745759444237","text":"#onthisday ","date":"2026-05-23T20:36:25.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7643188745759444237","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":1608,"views":24300,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7642475776289459469","text":"i mean I am a certified sommelier so you can trust me on this one","date":"2026-05-21T22:29:23.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7642475776289459469","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":6092,"views":102800,"hashtags":[],"wine":"Sauvignon Blanc Slushie","food":"Mexican Pizza / Taco Bell","store":"Unknown","wineType":"White"},{"id":"7641444698959236366","text":"rosé is so much more than a summer porch pounder!","date":"2026-05-19T03:48:41.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7641444698959236366","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/1691834a316f42e7bb7af1dbcc8c3669~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=ZvAF5y3iZdiai1HeUwRB%2FJXiqXY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"],"likes":1937,"views":31000,"hashtags":[],"wine":"Various Rosés","food":"Various Snacks","store":"Unknown","wineType":"Rosé"},{"id":"7639118658790329614","text":"tag your bubbly bestie","date":"2026-05-12T21:22:19.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7639118658790329614","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/3cbfadc22a544878bd9c89b30aecfd9b~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=n36fCIvFKj%2FiO%2Fceo4xVWBMCjdY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1"],"likes":867,"views":20800,"hashtags":[],"wine":"Various Sparkling Wines","food":"Various Snacks","store":"Trader Joe's","wineType":"Sparkling"},{"id":"7638828527743225102","text":"brb emotionally recovering from this Monday","date":"2026-05-12T02:36:34.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7638828527743225102","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":3408,"views":93000,"hashtags":[],"wine":"Espiral Vinho Verde","food":"Takeout Sushi","store":"Unknown","wineType":"White"},{"id":"7636849214953213198","text":"sauvy b season 4 lyfeeeeee","date":"2026-05-06T18:35:50.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7636849214953213198","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":2914,"views":35800,"hashtags":[],"wine":"Kendall-Jackson Sauvignon Blanc Spritz","food":"Unknown","store":"Unknown","wineType":"White"},{"id":"7636199038169206030","text":"nothing like a goblet of wine & a cheesy bean n rice burrito to kick off your week","date":"2026-05-05T00:32:36.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7636199038169206030","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":2306,"views":27300,"hashtags":[],"wine":"Chablis","food":"Cheesy Bean & Rice Burrito (Taco Bell)","store":"Unknown","wineType":"White"},{"id":"7634267958872739086","text":"I would never steer you wrong, save this before your next TJ's run!!!","date":"2026-04-29T19:38:57.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7634267958872739086","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":25900,"views":272200,"hashtags":[],"wine":"Wölffer Estate Summer in a Bottle Long Island Rosé","food":"BBQ Potato Chips + Caramelized Onion Dip","store":"Trader Joe's","wineType":"Rosé"},{"id":"7633533370860948749","text":"i didn't gatekeep this in 2018 and I'm not starting now!!!","date":"2026-04-27T20:08:42.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7633533370860948749","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":12300,"views":108100,"hashtags":[],"wine":"Espiral Vinho Verde","food":"Habanero Guac + Cowboy Caviar","store":"Unknown","wineType":"White"},{"id":"7629865547362028814","text":"I don't make the rules, but I kinda do","date":"2026-04-17T22:55:41.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7629865547362028814","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":1050,"views":14800,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7628027364768763150","text":"I can't fix everything but I can fix your sunday night with this pairing","date":"2026-04-13T00:02:25.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7628027364768763150","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":9765,"views":65300,"hashtags":[],"wine":"Duvergey-Taboureau Chablis","food":"Buttered Noodles","store":"Unknown","wineType":"White"},{"id":"7626613170748001549","text":"+ it's sommelier approved","date":"2026-04-09T04:34:36.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7626613170748001549","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":15800,"views":228200,"hashtags":[],"wine":"Whitehaven Sauvignon Blanc Slushie","food":"Unknown","store":"Unknown","wineType":"White"},{"id":"7625863680302779662","text":"if you've been loving my couch crusher pairings here on IG","date":"2026-04-07T04:06:17.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7625863680302779662","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p16-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/38e0656c5c734bebac1bd90944eea296~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=DwHmKthw3gyL4jtmYe2IVbK9OVs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast8&ftpl=1"],"likes":1603,"views":38700,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7624669948954152206","text":"#onthisday ","date":"2026-04-03T22:54:03.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7624669948954152206","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":540,"views":9813,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7624669783283272973","text":"good wine is whatever YOU enjoy","date":"2026-04-03T22:53:20.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7624669783283272973","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":304,"views":6973,"hashtags":[],"wine":"Kirkland Wine","food":"Unknown","store":"Costco","wineType":"Unknown"},{"id":"7624271268589751565","text":"she knows I come in with only good vibes","date":"2026-04-02T21:06:41.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7624271268589751565","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":1381,"views":21300,"hashtags":[],"wine":"Unknown","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7623222925553831182","text":"if you've been loving my couch crusher pairings","date":"2026-03-31T01:18:41.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7623222925553831182","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/bf01a239078b491bb1e14953b30c0580~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=izq6OSyrvou2H3GyyNkbOU%2Foy5E%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast8&ftpl=1"],"likes":3287,"views":94700,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7622486675977030925","text":"your no snob somm prescribing: one campari spritz","date":"2026-03-29T01:41:45.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7622486675977030925","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":273,"views":6435,"hashtags":[],"wine":"Campari Spritz / La Marca Prosecco","food":"Unknown","store":"Unknown","wineType":"Sparkling"},{"id":"7622478552612523278","text":"#onthisday ","date":"2026-03-29T01:10:05.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7622478552612523278","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":211,"views":4573,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7622083942694374669","text":"drop your tbell order and i'll give you a perfect wine pairing","date":"2026-03-27T23:38:59.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7622083942694374669","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":246,"views":4986,"hashtags":[],"wine":"Unknown","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7621713987750726926","text":"the perfect bite!!!","date":"2026-03-26T23:43:27.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7621713987750726926","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":2096,"views":34800,"hashtags":[],"wine":"La Crema Sonoma Coast Chardonnay","food":"Fromage Pavé Soft Ripened Cheese","store":"Trader Joe's","wineType":"White"},{"id":"7621338263369813261","text":"your midweek micro joy = secured","date":"2026-03-25T23:25:17.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7621338263369813261","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/abbcdd5c697c446ca430b7b9375e6972~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=gakGftxbT3zY31h3F2TqxXejXJI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast8&ftpl=1"],"likes":596,"views":21700,"hashtags":[],"wine":"Various Rosés","food":"Various Snacks","store":"Trader Joe's","wineType":"Rosé"},{"id":"7620635977937194254","text":"if you watched Heated Rivalry… this one's for you","date":"2026-03-24T02:00:02.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7620635977937194254","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":211,"views":4846,"hashtags":[],"wine":"Sancerre","food":"Tuna Melt","store":"Unknown","wineType":"White"},{"id":"7620161550464158990","text":"real talk, if you can brave TJ's on a Sunday you are braver than I am","date":"2026-03-22T19:19:01.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7620161550464158990","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/aa2f66777e7e4445a615b6f675239578~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=6iTszsmL%2BfPgXsnluDwo7QeH7Ww%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast8&ftpl=1"],"likes":1675,"views":57500,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7618760523391323405","text":"no pants. taco bell. pinot noir. new girl.","date":"2026-03-19T00:42:21.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7618760523391323405","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":511,"views":8957,"hashtags":[],"wine":"Pinot Noir","food":"Taco Bell","store":"Unknown","wineType":"Red"},{"id":"7618444378779995405","text":"","date":"2026-03-18T04:15:22.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7618444378779995405","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":3157,"views":48500,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7616549078939208973","text":"another night, another taco bell + wine pairing","date":"2026-03-13T01:40:49.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7616549078939208973","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":2781,"views":48200,"hashtags":[],"wine":"Justin Central Coast Chardonnay","food":"Chicken Bacon Ranch Chalupa / Bean Burrito (Taco Bell)","store":"Unknown","wineType":"White"},{"id":"7615429395636817166","text":"reminder from your no snob somm","date":"2026-03-10T01:15:45.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7615429395636817166","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":3053,"views":40100,"hashtags":[],"wine":"Various Sparkling Wines","food":"Snacks","store":"Unknown","wineType":"Sparkling"},{"id":"7614285651558649102","text":"family recipes taste better with wine.","date":"2026-03-06T23:17:40.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7614285651558649102","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":166,"views":3377,"hashtags":[],"wine":"Maison Joseph Drouhin Bourgogne Pinot Noir","food":"Beef Stroganoff","store":"Unknown","wineType":"Red"},{"id":"7613197713143909662","text":"your sign you can have your cake, your wine, and eat it too!!!","date":"2026-03-04T00:55:35.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7613197713143909662","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":300,"views":5038,"hashtags":[],"wine":"Cecilia Beretta Conegliano-Valdobbiadene Prosecco","food":"Toasted Coconut Sheet Cake","store":"Unknown","wineType":"Sparkling"},{"id":"7612030786799176973","text":"I've always been honest about living with anxiety while working in the wine industry","date":"2026-02-28T21:27:34.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7612030786799176973","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":2423,"views":34000,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7611645286116642061","text":"mercury is in retrograde so it's Taco Bell & wine season","date":"2026-02-27T20:31:57.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7611645286116642061","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":10500,"views":203500,"hashtags":[],"wine":"Lambrusco / Rosé / Sangiovese / Zinfandel / Grüner Veltliner","food":"Taco Bell","store":"Trader Joe's","wineType":"Unknown"},{"id":"7609038223909670158","text":"solo dates that include tacobell, movies that wreck you, and cocktails","date":"2026-02-20T19:55:14.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7609038223909670158","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":991,"views":9439,"hashtags":[],"wine":"Cocktail","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7606041062829804814","text":"i mean, i'm also going to gift myself flowers","date":"2026-02-12T18:04:12.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7606041062829804814","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/1e4bbc20f17d4105bcec1d99101de642~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=91yvwX4QTX8mxam3Kf4BckzeVTg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast8&ftpl=1"],"likes":321,"views":5335,"hashtags":[],"wine":"Various Wines","food":"Various Snacks","store":"Unknown","wineType":"Unknown"},{"id":"7603604331241180430","text":"not sure who's playing but I can't wait to watch the bad bunny concert","date":"2026-02-06T04:28:49.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7603604331241180430","thumbnailUrl":null,"isSlideshow":true,"slideshowImages":["https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/6ed3e4c777244d558e50f25ef6154ac7~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=5XE2n8j9Se7V5ZuVFf4FSNUf%2BWo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast8&ftpl=1"],"likes":222,"views":3972,"hashtags":[],"wine":"Various Wines","food":"Various Snacks","store":"Unknown","wineType":"Unknown"},{"id":"7600988066215431437","text":"","date":"2026-01-30T03:16:11.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7600988066215431437","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":14100,"views":217500,"hashtags":[],"wine":"Unknown","food":"Unknown","store":"Unknown","wineType":"Unknown"},{"id":"7598334657578470669","text":"i got the old lady sitting next to my on the plane","date":"2026-01-22T23:39:49.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7598334657578470669","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":192,"views":4084,"hashtags":[],"wine":"Unknown","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7597253540188359991","text":"when you're a red wine girly but love a simple bowl of buttered popcorn","date":"2026-01-20T01:44:16.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7597253540188359991","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":575,"views":8046,"hashtags":[],"wine":"Josh Cellars Pinot Noir","food":"Buttered Popcorn","store":"Unknown","wineType":"Red"},{"id":"7596173479473401102","text":"if you want to know which couch crusher pairing I could eat and drink every day of my life","date":"2026-01-17T03:53:03.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7596173479473401102","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":12100,"views":257900,"hashtags":[],"wine":"Domaines Brocard Sainte Céline Chablis","food":"La Délice de Bourgogne + Ritz Crackers + Pepper Jelly","store":"Trader Joe's","wineType":"White"},{"id":"7593166675105647927","text":"This TJ's snack + wine combo = instant serotonin","date":"2026-01-09T01:25:12.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7593166675105647927","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":1527,"views":20600,"hashtags":[],"wine":"Espiral Vinho Verde","food":"Elote Corn Dippers + White Queso","store":"Unknown","wineType":"White"},{"id":"7592087417272716558","text":"xmas tree still up, giant glass of wine poured","date":"2026-01-06T03:37:07.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7592087417272716558","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":579,"views":6736,"hashtags":[],"wine":"Joseph Drouhin Burgundy","food":"Triple Cream Brie + Ritz Crackers + Kerrygold Butter","store":"Unknown","wineType":"Red"},{"id":"7586840060931083534","text":"send this to a friend who needs a reminder this week","date":"2025-12-23T00:14:39.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7586840060931083534","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":39900,"views":349100,"hashtags":[],"wine":"Unknown","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7585505979878608142","text":"run to go get this wine + snack spread for the new season of emily in paris!!!!","date":"2025-12-19T09:57:40.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7585505979878608142","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":474,"views":6403,"hashtags":[],"wine":"Gavi","food":"Italian Olives + Prosciutto-Wrapped Mozzarella + Rosemary Nuts","store":"Trader Joe's","wineType":"White"},{"id":"7584974411288071479","text":"MY GO TO TACO BELL ORDER + WINE PAIRING!!!","date":"2025-12-17T23:35:13.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7584974411288071479","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":295,"views":4376,"hashtags":[],"wine":"La Vauvise Sancerre Le Trois Terroirs","food":"Cheesy Bean & Rice Burrito + Crunch Wrap Supreme (Taco Bell)","store":"Trader Joe's","wineType":"White"},{"id":"7582803309589826829","text":"I could eat and drink this everyday for the rest of my life","date":"2025-12-12T03:10:11.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7582803309589826829","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":10100,"views":185300,"hashtags":[],"wine":"Duvergey-Taboureau Chablis 1er Cru","food":"Fromage Pavé","store":"Trader Joe's","wineType":"White"},{"id":"7582328534966734093","text":"team vanilla or team chocolate though?!","date":"2025-12-10T20:27:53.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7582328534966734093","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":294,"views":7586,"hashtags":[],"wine":"Dry Creek Vineyard Zinfandel","food":"Little Debbie Chocolate Christmas Tree Cakes","store":"Unknown","wineType":"Red"},{"id":"7580211093587381518","text":"these cookies may be better than thin mints","date":"2025-12-05T03:31:00.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7580211093587381518","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":726,"views":25900,"hashtags":[],"wine":"Patroferno Appassimento Primitivo Puglia IGT","food":"Mini Dark Chocolate Mint Stars","store":"Unknown","wineType":"Red"},{"id":"7578986453615660343","text":"it's December 1st!","date":"2025-12-01T20:18:56.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7578986453615660343","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":3812,"views":89900,"hashtags":[],"wine":"Unknown","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7574193337029233975","text":"how is Thanksgiving next week","date":"2025-11-18T22:19:15.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7574193337029233975","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":2655,"views":64500,"hashtags":[],"wine":"La Burgondie Crémant de Bourgogne Reserve Brut","food":"Seasonal English Cheddar with Champagne","store":"Trader Joe's","wineType":"Sparkling"},{"id":"7572300540671970574","text":"what's yours???! Tbell + wine pairings","date":"2025-11-13T19:53:42.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7572300540671970574","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":5847,"views":85800,"hashtags":[],"wine":"Garnacha / Rosé / Pinot Noir / Cava / Sancerre","food":"Taco Bell","store":"Unknown","wineType":"Unknown"},{"id":"7568650486090353975","text":"this is the market research I truly live for","date":"2025-11-03T23:49:56.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7568650486090353975","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":423,"views":8291,"hashtags":[],"wine":"Trader Joe's Grand Reserve Oak Knoll Chardonnay","food":"Unexpected Cheddar + Maple Butter","store":"Trader Joe's","wineType":"White"},{"id":"7548506030116752653","text":"the pepper jelly is back bb!!!","date":"2025-09-10T16:59:33.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7548506030116752653","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":247,"views":3883,"hashtags":[],"wine":"Comte de la Chevalière Sancerre","food":"Pepper Jelly + Brie Cheese + Baguette","store":"Trader Joe's","wineType":"White"},{"id":"7548231728209366286","text":"this cheese stole my heart last year!!!","date":"2025-09-09T23:14:23.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7548231728209366286","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":346,"views":3932,"hashtags":[],"wine":"Ca'Storica Amarone della Valpolicella","food":"Red Leicester Cheese + Sugarbee Apple","store":"Unknown","wineType":"Red"},{"id":"7546668621074910478","text":"if someone asks just say your go-to no snob somm said to","date":"2025-09-05T18:09:33.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7546668621074910478","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":95,"views":1829,"hashtags":[],"wine":"Sparkling Rosé (Faff Wine / Mumm)","food":"McDonald's Spicy Ranch Snack Wrap","store":"Unknown","wineType":"Sparkling"},{"id":"7550392124043185463","text":"in case you needed the reminder, tbell & wine do in fact go well together","date":"2025-09-15T18:58:19.000Z","url":"https://www.tiktok.com/@samanthasommelier/video/7550392124043185463","thumbnailUrl":null,"isSlideshow":false,"slideshowImages":[],"likes":782,"views":17000,"hashtags":[],"wine":"Super Happy Sauvignon Blanc","food":"Cool Ranch Doritos Locos Taco / Caramel Apple Empanada (Taco Bell)","store":"Unknown","wineType":"White"}];
+
+// ─── STATE ───
+let ratings = {};
+const LS_KEY = 'samSommRatings';
+let storeFilter = 'all';
+let typeFilter = 'all';
+let statusFilter = 'all';
+let sortOrder = 'newest';
+let searchQuery = '';
+let showAll = false;
+
+function loadRatings() {
+  try { ratings = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch(e) { ratings = {}; }
+}
+function saveRatings() {
+  localStorage.setItem(LS_KEY, JSON.stringify(ratings));
+}
+function getRating(id) {
+  return ratings[id] || { wineRating:'not-tried', foodRating:'not-tried', pairingRating:'not-tried', notes:'' };
+}
+
+// ─── HELPERS ───
+function fmtNum(n) {
+  if (n >= 1000) return (n/1000).toFixed(n >= 10000 ? 0 : 1) + 'K';
+  return n.toString();
+}
+function fmtDate(iso) {
+  return new Date(iso).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+}
+function isPairing(p) { return p.wine !== 'Unknown' || p.food !== 'Unknown'; }
+
+function wineEmoji(t) {
+  const m = {Red:'🍷',White:'🥂',Rosé:'🌹',Sparkling:'🥂',Orange:'🍊'};
+  return m[t] || '🍷';
+}
+function winePlaceholderColor(t) {
+  const m = {Red:'#8B1A2B',White:'#C9A84C',Rosé:'#E8729A',Sparkling:'#4A9B8E',Orange:'#D4691E'};
+  return m[t] || '#888';
+}
+function storeBadgeClass(s) {
+  if (s === "Trader Joe's") return 'badge-store-TJ';
+  if (s === 'Costco') return 'badge-store-Costco';
+  if (s === 'Aldi') return 'badge-store-Aldi';
+  return 'badge-store-Other';
+}
+function storeLabel(s) {
+  if (s === "Trader Joe's") return "TJ's";
+  if (s === 'Unknown') return null;
+  return s;
+}
+
+// ─── SAM'S PICKS ───
+function renderPicks() {
+  const pairingPosts = PAIRINGS_DATA.filter(p => isPairing(p) && p.wine !== 'Unknown');
+  const top5 = [...pairingPosts].sort((a,b)=>b.likes-a.likes).slice(0,5);
+  const list = document.getElementById('picksList');
+  list.innerHTML = top5.map(p => `
+    <div class="pick-chip" onclick="scrollToCard('${p.id}')">
+      <div class="pick-wine">${p.wine}</div>
+      <div class="pick-food">${p.food !== 'Unknown' ? p.food : '—'}</div>
+      <div class="pick-likes">❤️ ${fmtNum(p.likes)}</div>
+    </div>
+  `).join('');
+}
+function scrollToCard(id) {
+  const el = document.getElementById('card-'+id);
+  if (el) el.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+// ─── FILTER / SORT ───
+function getFilteredData() {
+  let data = PAIRINGS_DATA.filter(p => showAll || isPairing(p));
+
+  if (storeFilter !== 'all') {
+    data = data.filter(p => {
+      if (storeFilter === 'other') return p.store !== "Trader Joe's" && p.store !== 'Costco' && p.store !== 'Aldi';
+      return p.store === storeFilter;
+    });
+  }
+  if (typeFilter !== 'all') data = data.filter(p => p.wineType === typeFilter);
+
+  if (statusFilter !== 'all') {
+    data = data.filter(p => {
+      const r = getRating(p.id);
+      const allRatings = [r.wineRating, r.foodRating, r.pairingRating];
+      if (statusFilter === 'untried') return allRatings.every(x => x === 'not-tried');
+      if (statusFilter === 'tried') return allRatings.some(x => x !== 'not-tried');
+      if (statusFilter === 'liked') return allRatings.some(x => x === 'loved' || x === 'liked');
+      if (statusFilter === 'notliked') return allRatings.some(x => x === 'meh' || x === 'disliked');
+      return true;
+    });
+  }
+
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    data = data.filter(p =>
+      p.wine.toLowerCase().includes(q) ||
+      p.food.toLowerCase().includes(q) ||
+      p.text.toLowerCase().includes(q)
+    );
+  }
+
+  data.sort((a,b) => {
+    if (sortOrder === 'newest') return new Date(b.date) - new Date(a.date);
+    if (sortOrder === 'oldest') return new Date(a.date) - new Date(b.date);
+    if (sortOrder === 'popular') return b.likes - a.likes;
+    if (sortOrder === 'liked') {
+      const score = r => {const x=getRating(r.id);const vals=[x.wineRating,x.foodRating,x.pairingRating];const pts={loved:3,liked:2,meh:1,disliked:0,'not-tried':-1};return vals.reduce((s,v)=>s+pts[v],0);};
+      return score(b) - score(a);
+    }
+    return 0;
+  });
+  return data;
+}
+
+// ─── STATS ───
+function updateStats() {
+  const all = PAIRINGS_DATA.filter(p => isPairing(p));
+  const total = all.length;
+  let tried = 0, liked = 0, notLiked = 0;
+  all.forEach(p => {
+    const r = getRating(p.id);
+    const vals = [r.wineRating, r.foodRating, r.pairingRating];
+    if (vals.some(x => x !== 'not-tried')) tried++;
+    if (vals.some(x => x === 'loved' || x === 'liked')) liked++;
+    if (vals.some(x => x === 'meh' || x === 'disliked')) notLiked++;
+  });
+  document.getElementById('statTotal').textContent = `🍷 ${total} pairings`;
+  document.getElementById('statTried').innerHTML = `🍽️ <span>${tried}</span> tried`;
+  document.getElementById('statLiked').innerHTML = `💚 <span>${liked}</span> liked`;
+  document.getElementById('statDisliked').innerHTML = `👎 <span>${notLiked}</span> not liked`;
+}
+
+// ─── SLIDESHOW STATE ───
+const slideState = {};
+
+// ─── CARD RENDERING ───
+function buildImageSection(p) {
+  const imgs = p.isSlideshow && p.slideshowImages.length > 0 ? p.slideshowImages : null;
+  const hasSingleImg = !imgs && p.thumbnailUrl;
+
+  if (imgs) {
+    slideState[p.id] = slideState[p.id] || 0;
+    const idx = slideState[p.id];
+    const dots = imgs.length > 1 ? `<div class="slide-dots">${imgs.map((_,i)=>`<div class="slide-dot${i===idx?' active':''}" onclick="goSlide('${p.id}',${i},event)"></div>`).join('')}</div>` : '';
+    const navs = imgs.length > 1 ? `
+      <button class="slide-nav slide-prev" onclick="goSlide('${p.id}',${(idx-1+imgs.length)%imgs.length},event)">‹</button>
+      <button class="slide-nav slide-next" onclick="goSlide('${p.id}',${(idx+1)%imgs.length},event)">›</button>` : '';
+    return `<div class="card-image-wrap slideshow-wrap" id="imgwrap-${p.id}">
+      <img src="${imgs[idx]}" alt="Pairing" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none;background:${winePlaceholderColor(p.wineType)};color:white">${wineEmoji(p.wineType)}</div>
+      ${navs}${dots}
+      <div class="badge-row">${buildBadges(p)}</div>
+    </div>`;
+  }
+  if (hasSingleImg) {
+    return `<div class="card-image-wrap">
+      <img src="${p.thumbnailUrl}" alt="Pairing" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-placeholder" style="display:none;background:${winePlaceholderColor(p.wineType)};color:white">${wineEmoji(p.wineType)}</div>
+      <div class="badge-row">${buildBadges(p)}</div>
+    </div>`;
+  }
+  return `<div class="card-image-wrap">
+    <div class="card-placeholder" style="background:${winePlaceholderColor(p.wineType)};color:white">${wineEmoji(p.wineType)}</div>
+    <div class="badge-row">${buildBadges(p)}</div>
+  </div>`;
+}
+
+function buildBadges(p) {
+  const typeBadge = p.wineType !== 'Unknown' ? `<span class="badge badge-type-${p.wineType}">${p.wineType}</span>` : '';
+  const sl = storeLabel(p.store);
+  const storeBadge = sl ? `<span class="badge ${storeBadgeClass(p.store)}">${sl}</span>` : '';
+  return typeBadge + storeBadge;
+}
+
+function buildRatingRow(postId, field, label, val) {
+  const buttons = [
+    ['loved','Loved it'],['liked','Liked it'],['meh','Meh'],['disliked','Didn\'t like']
+  ].map(([v,l]) => {
+    const isActive = val === v;
+    return `<button class="rating-btn${isActive?' active-'+v:''}" onclick="setRating('${postId}','${field}','${v}',this)">${l}</button>`;
+  }).join('');
+  const notTried = `<button class="rating-btn${val==='not-tried'?'':''}" onclick="setRating('${postId}','${field}','not-tried',this)" style="${val==='not-tried'?'border-color:#AAA;color:#555':''}">Not tried</button>`;
+  return `<div class="rating-row">
+    <span class="rating-label">${label}</span>
+    <div class="rating-btns">${buttons}${notTried}</div>
+  </div>`;
+}
+
+function buildCard(p) {
+  const r = getRating(p.id);
+  const isMuted = !isPairing(p);
+  const notesVisible = r.notes ? 'block' : 'none';
+
+  return `<div class="card${isMuted?' muted':''}" id="card-${p.id}">
+    ${buildImageSection(p)}
+    <div class="card-body">
+      <div class="card-wine">${p.wine !== 'Unknown' ? p.wine : '<em style="color:#999;font-weight:400">Wine not specified</em>'}</div>
+      <div class="card-food">${p.food !== 'Unknown' ? p.food : '<em style="color:#999">Food not specified</em>'}</div>
+      <div class="card-meta">
+        <span>${fmtDate(p.date)}</span>
+        <span class="card-engagement"><span>👁️ ${fmtNum(p.views)}</span><span>❤️ ${fmtNum(p.likes)}</span></span>
+      </div>
+    </div>
+    <div class="ratings-section">
+      ${buildRatingRow(p.id,'wineRating','🍷 Wine',r.wineRating)}
+      ${buildRatingRow(p.id,'foodRating','🍽️ Food',r.foodRating)}
+      ${buildRatingRow(p.id,'pairingRating','🤝 Pairing',r.pairingRating)}
+    </div>
+    <div class="notes-section">
+      <button class="notes-toggle" onclick="toggleNotes('${p.id}',this)">
+        ${r.notes ? '📝 Edit notes' : '+ Add notes…'}
+      </button>
+      <textarea class="notes-area" id="notes-${p.id}" placeholder="Your tasting notes…" style="display:${notesVisible}" onblur="saveNote('${p.id}',this)">${r.notes||''}</textarea>
+    </div>
+    <div class="card-footer">
+      <a class="tiktok-btn" href="${p.url}" target="_blank" rel="noopener">🎵 View on TikTok →</a>
+    </div>
+  </div>`;
+}
+
+function render() {
+  const data = getFilteredData();
+  const grid = document.getElementById('cardsGrid');
+  const empty = document.getElementById('emptyState');
+  const info = document.getElementById('resultsInfo');
+
+  if (data.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    info.textContent = '';
+  } else {
+    empty.style.display = 'none';
+    const total = PAIRINGS_DATA.filter(p => showAll || isPairing(p)).length;
+    info.textContent = `Showing ${data.length} of ${total} posts`;
+    grid.innerHTML = data.map(buildCard).join('');
+  }
+  updateStats();
+  updateShoppingList();
+}
+
+// ─── INTERACTIONS ───
+function goSlide(postId, newIdx, evt) {
+  evt && evt.stopPropagation();
+  const p = PAIRINGS_DATA.find(x => x.id === postId);
+  if (!p || !p.slideshowImages.length) return;
+  slideState[postId] = newIdx;
+  const wrap = document.getElementById('imgwrap-'+postId);
+  if (!wrap) return;
+  const img = wrap.querySelector('img');
+  const dots = wrap.querySelectorAll('.slide-dot');
+  const navs = wrap.querySelectorAll('.slide-nav');
+  if (img) img.src = p.slideshowImages[newIdx];
+  dots.forEach((d,i) => d.classList.toggle('active', i===newIdx));
+  // update nav onclick
+  if (navs.length >= 2) {
+    const prev = (newIdx - 1 + p.slideshowImages.length) % p.slideshowImages.length;
+    const next = (newIdx + 1) % p.slideshowImages.length;
+    navs[0].setAttribute('onclick', `goSlide('${postId}',${prev},event)`);
+    navs[1].setAttribute('onclick', `goSlide('${postId}',${next},event)`);
+  }
+}
+
+function setRating(postId, field, value, btn) {
+  if (!ratings[postId]) ratings[postId] = {wineRating:'not-tried',foodRating:'not-tried',pairingRating:'not-tried',notes:''};
+  // Toggle off if already selected
+  if (ratings[postId][field] === value) {
+    ratings[postId][field] = 'not-tried';
+  } else {
+    ratings[postId][field] = value;
+  }
+  saveRatings();
+  // Re-render just this card's rating row
+  const card = document.getElementById('card-'+postId);
+  if (!card) return;
+  const ratingsSec = card.querySelector('.ratings-section');
+  if (!ratingsSec) return;
+  const r = getRating(postId);
+  ratingsSec.innerHTML =
+    buildRatingRow(postId,'wineRating','🍷 Wine',r.wineRating) +
+    buildRatingRow(postId,'foodRating','🍽️ Food',r.foodRating) +
+    buildRatingRow(postId,'pairingRating','🤝 Pairing',r.pairingRating);
+  updateStats();
+  updateShoppingList();
+}
+
+function toggleNotes(postId, btn) {
+  const area = document.getElementById('notes-'+postId);
+  if (!area) return;
+  if (area.style.display === 'none') {
+    area.style.display = 'block';
+    area.focus();
+    btn.textContent = '− Hide notes';
+  } else {
+    area.style.display = 'none';
+    btn.textContent = getRating(postId).notes ? '📝 Edit notes' : '+ Add notes…';
+  }
+}
+
+function saveNote(postId, area) {
+  if (!ratings[postId]) ratings[postId] = {wineRating:'not-tried',foodRating:'not-tried',pairingRating:'not-tried',notes:''};
+  ratings[postId].notes = area.value;
+  saveRatings();
+}
+
+// ─── SHOPPING LIST ───
+function openSidebar() {
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('sidebarOverlay').classList.add('open');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('open');
+}
+
+function updateShoppingList() {
+  const liked = PAIRINGS_DATA.filter(p => {
+    const r = getRating(p.id);
+    return [r.wineRating,r.foodRating,r.pairingRating].some(x => x === 'loved' || x === 'liked');
+  });
+  document.getElementById('fabBadge').textContent = liked.length;
+
+  const body = document.getElementById('sidebarBody');
+  if (liked.length === 0) {
+    body.innerHTML = '<div class="sidebar-empty">Mark pairings as "Loved it" or "Liked it" to build your list!</div>';
+    return;
+  }
+
+  const byStore = {};
+  liked.forEach(p => {
+    const key = p.store === 'Unknown' ? 'Other / Unknown Store' : p.store;
+    if (!byStore[key]) byStore[key] = [];
+    byStore[key].push(p);
+  });
+
+  body.innerHTML = Object.entries(byStore).map(([store, posts]) => `
+    <div class="store-group">
+      <div class="store-group-title">${store}</div>
+      ${posts.map(p => {
+        const r = getRating(p.id);
+        const topRating = [r.wineRating,r.foodRating,r.pairingRating].find(x => x==='loved'||x==='liked') || '';
+        return `<div class="list-item">
+          <div class="list-wine">${p.wine !== 'Unknown' ? p.wine : '—'}</div>
+          <div class="list-food">${p.food !== 'Unknown' ? p.food : '—'}</div>
+          <div class="list-rating">${topRating === 'loved' ? '💚 Loved it' : topRating === 'liked' ? '💙 Liked it' : ''}</div>
+        </div>`;
+      }).join('')}
+    </div>
+  `).join('');
+}
+
+// ─── FILTER CHIPS ───
+document.querySelectorAll('.filter-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const group = btn.dataset.group;
+    document.querySelectorAll(`.filter-chip[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (group === 'store') storeFilter = btn.dataset.value;
+    if (group === 'type') typeFilter = btn.dataset.value;
+    if (group === 'status') statusFilter = btn.dataset.value;
+    render();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', e => {
+  searchQuery = e.target.value.trim();
+  render();
+});
+
+document.getElementById('sortSelect').addEventListener('change', e => {
+  sortOrder = e.target.value;
+  render();
+});
+
+document.getElementById('showAllToggle').addEventListener('change', e => {
+  showAll = e.target.checked;
+  render();
+});
+
+// ─── INIT ───
+loadRatings();
+renderPicks();
+render();
+</script>
+</body>
+</html>
