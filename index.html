@@ -986,11 +986,14 @@ function getFilteredData() {
   if (statusFilter !== 'all') {
     data = data.filter(p => {
       const r = getRating(p.id);
-      const allRatings = [r.wineRating, r.foodRating, r.pairingRating];
-      if (statusFilter === 'untried') return allRatings.every(x => x === 'not-tried');
-      if (statusFilter === 'tried') return allRatings.some(x => x !== 'not-tried');
-      if (statusFilter === 'liked') return allRatings.some(x => x === 'loved' || x === 'liked');
-      if (statusFilter === 'notliked') return allRatings.some(x => x === 'meh' || x === 'disliked');
+      // Porch-pounders and recipes only rate wine (wineRating = overall for recipes)
+      const relevant = p.category === 'pairing'
+        ? [r.wineRating, r.foodRating, r.pairingRating]
+        : [r.wineRating];
+      if (statusFilter === 'untried') return relevant.every(x => x === 'not-tried');
+      if (statusFilter === 'tried') return relevant.some(x => x !== 'not-tried');
+      if (statusFilter === 'liked') return relevant.some(x => x === 'loved' || x === 'liked');
+      if (statusFilter === 'notliked') return relevant.some(x => x === 'meh' || x === 'disliked');
       return true;
     });
   }
@@ -1000,7 +1003,7 @@ function getFilteredData() {
     if (sortOrder === 'oldest') return new Date(a.date) - new Date(b.date);
     if (sortOrder === 'popular') return b.likes - a.likes;
     if (sortOrder === 'liked') {
-      const score = r => {const x=getRating(r.id);const vals=[x.wineRating,x.foodRating,x.pairingRating];const pts={loved:3,liked:2,meh:1,disliked:0,'not-tried':-1};return vals.reduce((s,v)=>s+pts[v],0);};
+      const score = r => {const x=getRating(r.id);const vals=r.category==='pairing'?[x.wineRating,x.foodRating,x.pairingRating]:[x.wineRating];const pts={loved:3,liked:2,meh:1,disliked:0,'not-tried':-1};return vals.reduce((s,v)=>s+pts[v],0);};
       return score(b) - score(a);
     }
     return 0;
@@ -1015,7 +1018,9 @@ function updateStats() {
   let tried = 0, liked = 0, notLiked = 0;
   all.forEach(p => {
     const r = getRating(p.id);
-    const vals = [r.wineRating, r.foodRating, r.pairingRating];
+    const vals = p.category === 'pairing'
+      ? [r.wineRating, r.foodRating, r.pairingRating]
+      : [r.wineRating];
     if (vals.some(x => x !== 'not-tried')) tried++;
     if (vals.some(x => x === 'loved' || x === 'liked')) liked++;
     if (vals.some(x => x === 'meh' || x === 'disliked')) notLiked++;
@@ -1121,9 +1126,14 @@ function buildCard(p) {
       </div>
     </div>
     <div class="ratings-section">
-      ${buildRatingRow(p.id,'wineRating','🍷 Wine',r.wineRating)}
-      ${buildRatingRow(p.id,'foodRating','🍽️ Food',r.foodRating)}
-      ${buildRatingRow(p.id,'pairingRating','🤝 Pairing',r.pairingRating)}
+      ${p.category === 'pairing'
+        ? buildRatingRow(p.id,'wineRating','🍷 Wine',r.wineRating)
+          + buildRatingRow(p.id,'foodRating','🍽️ Food',r.foodRating)
+          + buildRatingRow(p.id,'pairingRating','🤝 Pairing',r.pairingRating)
+        : p.category === 'porch-pounder'
+        ? buildRatingRow(p.id,'wineRating','🍷 Wine',r.wineRating)
+        : buildRatingRow(p.id,'wineRating','⭐ Overall',r.wineRating)
+      }
     </div>
     <div class="notes-section">
       <button class="notes-toggle" onclick="toggleNotes('${p.id}',this)">
