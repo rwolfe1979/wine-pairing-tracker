@@ -1537,7 +1537,7 @@ function cycleVariantTo(gkey, idx, evt) {
 // ─── FILTER / SORT ───
 function updateTabCounts(baseData) {
   // baseData = posts after search/store/type filters but before status + tab filter
-  const countTab = cat => baseData.filter(p => p.category === cat).length;
+  const countTab = cat => baseData.filter(p => (p.categories || [p.category]).includes(cat)).length;
   document.getElementById('countPairing').textContent = countTab('pairing');
   document.getElementById('countPorchPounder').textContent = countTab('porch-pounder');
   document.getElementById('countRecipe').textContent = countTab('recipe');
@@ -1572,7 +1572,7 @@ function getFilteredData() {
   updateTabCounts(data);
 
   // Filter to active tab
-  data = data.filter(p => p.category === activeTab);
+  data = data.filter(p => (p.categories || [p.category]).includes(activeTab));
 
   if (statusFilter !== 'all') {
     data = data.filter(p => {
@@ -1751,7 +1751,7 @@ function render() {
     info.textContent = '';
   } else {
     empty.style.display = 'none';
-    const tabTotal = PAIRINGS_DATA.map(p => getEffectivePost(p.id)).filter(p => p.category === activeTab).length;
+    const tabTotal = PAIRINGS_DATA.map(p => getEffectivePost(p.id)).filter(p => (p.categories || [p.category]).includes(activeTab)).length;
     const groups = groupByWine(data);
     window._currentGroups = {};
     groups.forEach(g => { window._currentGroups[encodeGroupKey(g[0].drinkName || g[0].wine)] = g; });
@@ -2054,7 +2054,7 @@ function buildInboxPost(p) {
 
   // ── form (pre-populated from current slide decision if any) ──
   const dec = decisions[cur];
-  const initCategory = dec?.category || 'pairing';
+  const initCategories = dec?.categories || (dec?.category ? [dec.category] : ['pairing']);
   let initDrinks = [], initFoods = [];
   if (dec?.action === 'pairing') {
     if (dec.drinkItems || dec.foodItems) {
@@ -2080,11 +2080,9 @@ function buildInboxPost(p) {
     <button class="btn-link" onclick="addInboxFoodRow('${postId}')">+ add food item</button>
     <div class="inbox-form-row" style="margin-top:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
       <span style="font-size:0.78rem;color:var(--text-secondary)">Type:</span>
-      <select id="inbox-cat-${postId}" style="font-size:0.8rem;padding:2px 6px;border-radius:4px;border:1px solid var(--border);background:var(--surface);color:var(--text-primary)">
-        <option value="pairing" ${initCategory==='pairing'?'selected':''}>Pairing</option>
-        <option value="porch-pounder" ${initCategory==='porch-pounder'?'selected':''}>Porch Pounder</option>
-        <option value="recipe" ${initCategory==='recipe'?'selected':''}>Recipe</option>
-      </select>
+      <label style="font-size:0.78rem;display:flex;align-items:center;gap:3px"><input type="checkbox" class="inbox-cat-cb-${postId}" value="pairing" ${initCategories.includes('pairing')?'checked':''}> Pairing</label>
+      <label style="font-size:0.78rem;display:flex;align-items:center;gap:3px"><input type="checkbox" class="inbox-cat-cb-${postId}" value="porch-pounder" ${initCategories.includes('porch-pounder')?'checked':''}> Porch Pounder</label>
+      <label style="font-size:0.78rem;display:flex;align-items:center;gap:3px"><input type="checkbox" class="inbox-cat-cb-${postId}" value="recipe" ${initCategories.includes('recipe')?'checked':''}> Recipe</label>
       <div class="inbox-form-actions" style="margin-left:auto">
         <button class="btn-secondary" onclick="skipInboxSlide('${postId}')">Skip</button>
         <button class="btn-primary" onclick="addInboxPairing('${postId}')">Add</button>
@@ -2164,8 +2162,9 @@ function addInboxPairing(postId) {
   if (!inboxReviews[postId].slides) inboxReviews[postId].slides = [];
   const slides = PAIRINGS_DATA.find(x => x.id === postId)?.slideshowImages || [];
   const cur = slides.length ? (inboxSlideIdx[postId] || 0) : inboxReviews[postId].slides.length;
-  const category = document.getElementById('inbox-cat-' + postId)?.value || 'pairing';
-  inboxReviews[postId].slides[cur] = { action:'pairing', category, drinkItems, foodItems };
+  const checked = [...document.querySelectorAll('.inbox-cat-cb-' + postId + ':checked')].map(cb => cb.value);
+  const categories = checked.length ? checked : ['pairing'];
+  inboxReviews[postId].slides[cur] = { action:'pairing', categories, drinkItems, foodItems };
   saveInboxReviews();
   if (slides.length) advanceToNextUnreviewed(postId);
   refreshInboxPost(postId);
@@ -2267,7 +2266,7 @@ function buildExportData() {
           wine: name, food: fi.map(f=>f.product).filter(Boolean).join(' + ') || 'Unknown',
           store: di[0]?.store || fi[0]?.store || 'Unknown',
           wineType: di[0]?.wineType || 'N/A',
-          category: s.category || 'pairing', wineImageUrl: slideImg, foodImageUrl: null,
+          category: (s.categories || [s.category || 'pairing'])[0], categories: s.categories || [s.category || 'pairing'], wineImageUrl: slideImg, foodImageUrl: null,
           isSlideshow: false, slideshowImages: [],
           isMultiPairingSplit: true,
         });
