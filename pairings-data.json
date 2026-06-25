@@ -274,7 +274,7 @@
     "wineType": "Sparkling",
     "wineImageUrl": "https://caskcartel.com/cdn/shop/products/aperol-3l-liqueur.jpg",
     "foodImageUrl": null,
-    "category": "pairing",
+    "category": "hidden",
     "drinkType": "Spritz Recipe",
     "drinkName": "Aperol Spritz",
     "drinkItems": [
@@ -646,6 +646,223 @@
       }
     ],
     "originalPostId": "7651757574487805198",
+    "isMultiPairingSplit": true
+  },
+  {
+    "id": "7651757574487805198_r0",
+    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
+    "date": "2026-06-15T22:47:46.000Z",
+    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
+    "thumbnailUrl": null,
+    "isSlideshow": false,
+    "slideshowImages": [],
+    "likes": 245,
+    "views": 5070,
+    "hashtags": [],
+    "wine": "Asolo Prosecco",
+    "food": "Krinkle Cut Himalayan Salt Potato Chips",
+    "store": "Costco",
+    "wineType": "Sparkling",
+    "wineImageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/b9b27d6be2b643ef8a984e52c5c8396b~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=pANJGYudbNoY7q1Z8ZH55%2FQ9U6I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
+    "foodImageUrl": null,
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Asolo Prosecco",
+    "drinkItems": [
+      {
+        "brand": "Kirkland",
+        "product": "Asolo Prosecco",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": "Costco",
+        "price": null,
+        "vintage": null,
+        "region": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Kirkland",
+        "product": "Krinkle Cut Himalayan Salt Potato Chips",
+        "category": "other",
+        "store": "Unknown",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "originalPostId": "7651757574487805198",
+    "categories": [
+      "pairing"
+    ],
+    "isMultiPairingSplit": true
+  },
+  {
+    "id": "7651757574487805198_r1",
+    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
+    "date": "2026-06-15T22:47:46.000Z",
+    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
+    "thumbnailUrl": null,
+    "isSlideshow": false,
+    "slideshowImages": [],
+    "likes": 245,
+    "views": 5070,
+    "hashtags": [],
+    "wine": "Brut",
+    "food": "Hot & Spicy",
+    "store": "Unknown",
+    "wineType": "Sparkling",
+    "wineImageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/556ae68be81548daa5a580350f059b13~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=2i0pccHJbKMfT3f8wejLpFX7mH8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
+    "foodImageUrl": null,
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Brut",
+    "drinkItems": [
+      {
+        "brand": "Gruet",
+        "product": "Brut",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": "Unknown",
+        "price": null,
+        "vintage": null,
+        "region": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Cheez It",
+        "product": "Hot & Spicy",
+        "category": "chips/snack",
+        "store": "Unknown",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "originalPostId": "7651757574487805198",
+    "categories": [
+      "pairing"
+    ],
+    "isMultiPairingSplit": true
+  },
+  {
+    "id": "7651757574487805198_r2",
+    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
+    "date": "2026-06-15T22:47:46.000Z",
+    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
+    "thumbnailUrl": null,
+    "isSlideshow": false,
+    "slideshowImages": [],
+    "likes": 245,
+    "views": 5070,
+    "hashtags": [],
+    "wine": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
+    "food": "Patio Chips + Caramelized Onion Dip",
+    "store": "Trader Joe's",
+    "wineType": "Sparkling",
+    "wineImageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/1eb24ee9dd464de1b9a019f72a681f4f~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=w%2B7FqEEAi00hMr2dR5PvW8h9tHQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
+    "foodImageUrl": null,
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
+    "drinkItems": [
+      {
+        "brand": "Cecilia Beretta",
+        "product": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": "Trader Joe's",
+        "price": null,
+        "vintage": null,
+        "region": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Trader Joe's",
+        "product": "Patio Chips",
+        "category": "chips/snack",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Trader Joe's",
+        "product": "Caramelized Onion Dip",
+        "category": "dip/spread",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "originalPostId": "7651757574487805198",
+    "categories": [
+      "pairing"
+    ],
+    "isMultiPairingSplit": true
+  },
+  {
+    "id": "7651757574487805198_r3",
+    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
+    "date": "2026-06-15T22:47:46.000Z",
+    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
+    "thumbnailUrl": null,
+    "isSlideshow": false,
+    "slideshowImages": [],
+    "likes": 245,
+    "views": 5070,
+    "hashtags": [],
+    "wine": "Prosecco",
+    "food": "Cheddar & Sour Cream Potato Chips",
+    "store": "Unknown",
+    "wineType": "Sparkling",
+    "wineImageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/9b5108aa134b484894bc404c65a8d0c5~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=DNXKWXkxVNfePZTC00K%2FOf01%2FN8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
+    "foodImageUrl": null,
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Prosecco",
+    "drinkItems": [
+      {
+        "brand": "Mionetto",
+        "product": "Prosecco",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": "Unknown",
+        "price": null,
+        "vintage": null,
+        "region": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Ruffles",
+        "product": "Cheddar & Sour Cream Potato Chips",
+        "category": "chips/snack",
+        "store": "Unknown",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "originalPostId": "7651757574487805198",
+    "categories": [
+      "pairing"
+    ],
     "isMultiPairingSplit": true
   },
   {
@@ -1696,7 +1913,7 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": "https://tacobellmenu.org/wp-content/uploads/2024/06/taco-bell-cheesy-bean-and-rice-burrito.jpg",
-    "category": "pairing",
+    "category": "hidden",
     "drinkType": "Wine",
     "drinkName": "Chablis",
     "drinkItems": [
@@ -2513,7 +2730,7 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing",
+    "category": "hidden",
     "drinkType": "Wine",
     "drinkName": "Pinot Noir",
     "drinkItems": [
@@ -2690,7 +2907,7 @@
     "wineType": "Sparkling",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing",
+    "category": "hidden",
     "drinkType": "Wine",
     "drinkName": "Various Sparkling Wines",
     "drinkItems": [
@@ -2905,7 +3122,7 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing",
+    "category": "hidden",
     "drinkType": "Wine",
     "drinkName": "Lambrusco / Rosé / Sangiovese / Zinfandel / Grüner Veltliner",
     "drinkItems": [
@@ -4221,7 +4438,7 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing",
+    "category": "hidden",
     "drinkType": "Wine",
     "drinkName": "Garnacha / Rosé / Pinot Noir / Cava / Sancerre",
     "drinkItems": [
