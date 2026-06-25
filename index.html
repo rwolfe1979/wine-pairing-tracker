@@ -1208,6 +1208,7 @@ body {
     <div class="detail-footer">
       <a id="detailTikTokBtn" class="tiktok-btn" href="#" target="_blank" rel="noopener">🎵 TikTok →</a>
       <button class="btn-secondary" onclick="openEditFromDetail()">✏️ Edit</button>
+      <button class="btn-secondary" style="color:var(--text-secondary)" onclick="hidePost(currentDetailId)">🙈 Hide</button>
       <button class="btn-secondary" onclick="closeDetailModal()">Close</button>
     </div>
   </div>
@@ -1443,6 +1444,15 @@ function openEditFromDetail() {
   openEditModal(id);
 }
 
+function hidePost(id) {
+  if (!id) return;
+  if (!confirm('Hide this post from all tabs? You can undo by clicking Publish to App (or clear it from the Review Inbox export bar).')) return;
+  hiddenOverrides.add(id);
+  saveHiddenOverrides();
+  closeDetailModal();
+  render(); renderPicks();
+}
+
 // ─── WINE GROUPING ───
 const groupVariantState = {};
 
@@ -1536,7 +1546,7 @@ function updateTabCounts(baseData) {
 
 function getFilteredData() {
   // Start from all posts with effective overrides, exclude hidden
-  let data = PAIRINGS_DATA.map(p => getEffectivePost(p.id)).filter(p => p.category !== 'hidden');
+  let data = PAIRINGS_DATA.map(p => getEffectivePost(p.id)).filter(p => p.category !== 'hidden' && !hiddenOverrides.has(p.id));
 
   // Apply search/store/type filters first (for tab count calculation)
   if (storeFilter !== 'all') {
@@ -1898,6 +1908,13 @@ function saveInboxReviews() {
   localStorage.setItem(INBOX_LS_KEY, JSON.stringify(inboxReviews));
 }
 
+const HIDDEN_LS_KEY = 'wineHiddenPosts';
+let hiddenOverrides = new Set(JSON.parse(localStorage.getItem(HIDDEN_LS_KEY) || '[]'));
+
+function saveHiddenOverrides() {
+  localStorage.setItem(HIDDEN_LS_KEY, JSON.stringify([...hiddenOverrides]));
+}
+
 function isInboxCandidate(p) {
   if (inboxReviews[p.id]?.reopened) return true; // explicitly re-opened for correction
   if (p.category === 'hidden') return false;
@@ -2252,6 +2269,11 @@ function buildExportData() {
       exportData[origIdx] = Object.assign({}, origPost, { category: 'hidden' });
     }
   }
+  // Apply in-session hide overrides
+  hiddenOverrides.forEach(id => {
+    const idx = exportData.findIndex(p => p.id === id);
+    if (idx !== -1) exportData[idx] = Object.assign({}, exportData[idx], { category: 'hidden' });
+  });
   return exportData;
 }
 
@@ -2332,6 +2354,8 @@ async function publishToRepo() {
       if (inboxReviews[id]?.done) delete inboxReviews[id];
     });
     saveInboxReviews();
+    hiddenOverrides.clear();
+    saveHiddenOverrides();
     render(); renderPicks();
     btn.textContent = '✅ Published!';
     setTimeout(() => { btn.textContent = origLabel; btn.disabled = false; }, 3000);
