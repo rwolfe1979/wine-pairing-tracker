@@ -9,9 +9,9 @@ with open(DATA_FILE, 'r', encoding='utf-8-sig') as f:
 with open(HTML_FILE, 'r', encoding='utf-8') as f:
     lines = f.readlines()
 
-new_line = f'const PAIRINGS_DATA = {json.dumps(data, ensure_ascii=False)};\n'
+new_line = f'let PAIRINGS_DATA = []; // loaded by initApp()\n'
 for i, line in enumerate(lines):
-    if line.strip().startswith('const PAIRINGS_DATA = '):
+    if line.strip().startswith('let PAIRINGS_DATA = '):
         lines[i] = new_line
         print(f'Updated PAIRINGS_DATA on line {i + 1}')
         break
