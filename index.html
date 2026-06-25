@@ -2153,13 +2153,15 @@ function hideInboxPost(postId) {
 }
 
 function markPostDone(postId) {
-  const splits = inboxReviews[postId]?.splits || [];
-  if (splits.length === 0) {
+  const review = inboxReviews[postId] || {};
+  const hasPairings = (review.slides || []).some(s => s?.action === 'pairing')
+                   || (review.splits || []).length > 0;
+  if (!hasPairings) {
     if (!confirm('No pairings added. Hide this post from the inbox?')) return;
   }
   if (!inboxReviews[postId]) inboxReviews[postId] = {};
   inboxReviews[postId].done = true;
-  inboxReviews[postId].action = splits.length > 0 ? 'split' : 'hide';
+  inboxReviews[postId].action = hasPairings ? 'split' : 'hide';
   saveInboxReviews();
   const el = document.getElementById('inbox-' + postId);
   if (el) el.remove();
