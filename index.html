@@ -2054,6 +2054,7 @@ function buildInboxPost(p) {
 
   // ── form (pre-populated from current slide decision if any) ──
   const dec = decisions[cur];
+  const initCategory = dec?.category || 'pairing';
   let initDrinks = [], initFoods = [];
   if (dec?.action === 'pairing') {
     if (dec.drinkItems || dec.foodItems) {
@@ -2077,10 +2078,16 @@ function buildInboxPost(p) {
     <div class="edit-section-label" style="margin-top:8px">🍽️ Food</div>
     <div id="inbox-foods-${postId}">${foodRowsHtml}</div>
     <button class="btn-link" onclick="addInboxFoodRow('${postId}')">+ add food item</button>
-    <div class="inbox-form-row" style="margin-top:8px">
-      <div class="inbox-form-actions">
+    <div class="inbox-form-row" style="margin-top:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <span style="font-size:0.78rem;color:var(--text-secondary)">Type:</span>
+      <select id="inbox-cat-${postId}" style="font-size:0.8rem;padding:2px 6px;border-radius:4px;border:1px solid var(--border);background:var(--surface);color:var(--text-primary)">
+        <option value="pairing" ${initCategory==='pairing'?'selected':''}>Pairing</option>
+        <option value="porch-pounder" ${initCategory==='porch-pounder'?'selected':''}>Porch Pounder</option>
+        <option value="recipe" ${initCategory==='recipe'?'selected':''}>Recipe</option>
+      </select>
+      <div class="inbox-form-actions" style="margin-left:auto">
         <button class="btn-secondary" onclick="skipInboxSlide('${postId}')">Skip</button>
-        <button class="btn-primary" onclick="addInboxPairing('${postId}')">Add Pairing</button>
+        <button class="btn-primary" onclick="addInboxPairing('${postId}')">Add</button>
       </div>
     </div>
   </div>`;
@@ -2157,7 +2164,8 @@ function addInboxPairing(postId) {
   if (!inboxReviews[postId].slides) inboxReviews[postId].slides = [];
   const slides = PAIRINGS_DATA.find(x => x.id === postId)?.slideshowImages || [];
   const cur = slides.length ? (inboxSlideIdx[postId] || 0) : inboxReviews[postId].slides.length;
-  inboxReviews[postId].slides[cur] = { action:'pairing', drinkItems, foodItems };
+  const category = document.getElementById('inbox-cat-' + postId)?.value || 'pairing';
+  inboxReviews[postId].slides[cur] = { action:'pairing', category, drinkItems, foodItems };
   saveInboxReviews();
   if (slides.length) advanceToNextUnreviewed(postId);
   refreshInboxPost(postId);
@@ -2259,7 +2267,7 @@ function buildExportData() {
           wine: name, food: fi.map(f=>f.product).filter(Boolean).join(' + ') || 'Unknown',
           store: di[0]?.store || fi[0]?.store || 'Unknown',
           wineType: di[0]?.wineType || 'N/A',
-          category: 'pairing', wineImageUrl: slideImg, foodImageUrl: null,
+          category: s.category || 'pairing', wineImageUrl: slideImg, foodImageUrl: null,
           isSlideshow: false, slideshowImages: [],
           isMultiPairingSplit: true,
         });
