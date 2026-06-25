@@ -52,6 +52,7 @@ HIDDEN_POST_IDS = {
     '7652068180772310285',  # "sniffs wine - I got nothing"
     '7650329546444639501',  # SLO travel vlog
     '7636849214953213198',  # spritz recipe only, no food
+    '7609038223909670158',  # solo date lifestyle vlog (cocktail+tbell extracted incorrectly)
 }
 
 WINE_TYPE_HINTS = {
