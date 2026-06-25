@@ -16,7 +16,44 @@
     "wineType": "Red",
     "wineImageUrl": "https://us.familleperrin.com/cdn/shop/files/Perrin_Reserve_Blanc_3f6849fc-e9b4-47bf-b598-62dafee57a54.jpg?v=1747640958&width=800",
     "foodImageUrl": "https://sporked.com/wp-content/uploads/2026/03/TJs-Rolled-Tortilla-Chips-Ranch-Header.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Famille Perrin Côtes du Rhône Réserve Blanc",
+    "drinkItems": [
+      {
+        "brand": "Famille Perrin",
+        "product": "Côtes du Rhône Réserve Blanc",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Tortilla Rolled Ranch Chips",
+        "category": "chips/snack",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Everything & the Elote Greek Dip",
+        "category": "dip/spread",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7540110007182904590",
@@ -35,7 +72,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7324394247459802411",
@@ -54,7 +119,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Cacio e Pepe",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7654772164524100877",
@@ -73,7 +166,44 @@
     "wineType": "White",
     "wineImageUrl": "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_88f66d4b-bba9-4fbb-bc03-c32e5641d322.jpg",
     "foodImageUrl": "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_260c16d2-4a2c-4388-830e-b44f3c4c0091.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Mimo Moutinho Vinho Verde",
+    "drinkItems": [
+      {
+        "brand": "Mimo Moutinho",
+        "product": "Vinho Verde",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Aldi",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Aldi",
+        "product": "Fried Pickle Ranch Potato Chips",
+        "category": "chips/snack",
+        "store": "Aldi",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": null,
+        "product": "Fried Pickle & Ranch Dip",
+        "category": "dip/spread",
+        "store": "Aldi",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7654400348412562701",
@@ -107,7 +237,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7652562985243725070",
@@ -126,7 +274,44 @@
     "wineType": "Sparkling",
     "wineImageUrl": "https://caskcartel.com/cdn/shop/products/aperol-3l-liqueur.jpg",
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Spritz Recipe",
+    "drinkName": "Aperol Spritz",
+    "drinkItems": [
+      {
+        "brand": "Campari Group",
+        "product": "Spritz",
+        "productType": "liqueur",
+        "wineType": "Sparkling",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Dip",
+        "category": "dip/spread",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Taco Bell",
+        "product": "Mexican Pizza",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7652433024302222606",
@@ -145,7 +330,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7652068180772310285",
@@ -164,7 +367,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7651757574487805198",
@@ -197,7 +418,35 @@
     "wineType": "Sparkling",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Spritz Recipe",
+    "drinkName": "Various Spritzes",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Various Spritzes",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Various Snacks",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7651371370625977614",
@@ -216,7 +465,53 @@
     "wineType": "Rosé",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2025/06/ruggero-di-bardo-susumaniello-2023-trader-joes.jpg",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2024/11/Cornbread-Crisps.png",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "2025 Ruggero di Bardo Susumaniello Rosato",
+    "drinkItems": [
+      {
+        "brand": "Ruggero di Bardo",
+        "product": "Susumaniello Rosato",
+        "productType": "wine",
+        "wineType": "Rosé",
+        "store": null,
+        "region": null,
+        "vintage": "2025",
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Corn Bread Crisps",
+        "category": "chips/snack",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Unexpected Hatch Chili Spread",
+        "category": "dip/spread",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Pickled Jalapeños",
+        "category": "pickled/preserved",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7650701605523803406",
@@ -248,7 +543,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7650329546444639501_0",
@@ -269,7 +582,25 @@
     "foodImageUrl": null,
     "originalPostId": "7650329546444639501",
     "category": "hidden",
-    "isMultiPairingSplit": true
+    "isMultiPairingSplit": true,
+    "drinkType": "Wine",
+    "drinkName": "🥰 🛌 hotel stay was @thehotelslo and I can’t recommend it enough!!!",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "🥰 🛌 hotel stay was @thehotelslo and I can’t recommend it enough!!!",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7650329546444639501_1",
@@ -290,7 +621,25 @@
     "foodImageUrl": null,
     "originalPostId": "7650329546444639501",
     "category": "hidden",
-    "isMultiPairingSplit": true
+    "isMultiPairingSplit": true,
+    "drinkType": "Wine",
+    "drinkName": "places I wine tasted this trip were @biddleranchvineyard and @tolosawinery !! I recommend both and if you go let me know and I have quite a few more for you to add to your itinerary!! ;) 🍽️ places we dined: @misturarestaurantebar , @linnaeascafe , @lincolnmarketdeli , @natesonmarsh , @oldslobbq , @tasteseeds , @kreuzbergcalifornia 🍸places we drank @drinkregion @highbar_slo 🖼️ places we shopped & explored @slomuseumofart @thrifty.beaches @understory.plantshop @ahlouisstore @booboorecords until we meet again …. 💕💕💕💕 #shareslo @ShareSLO",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "places I wine tasted this trip were @biddleranchvineyard and @tolosawinery !! I recommend both and if you go let me know and I have quite a few more for you to add to your itinerary!! ;) 🍽️ places we dined: @misturarestaurantebar , @linnaeascafe , @lincolnmarketdeli , @natesonmarsh , @oldslobbq , @tasteseeds , @kreuzbergcalifornia 🍸places we drank @drinkregion @highbar_slo 🖼️ places we shopped & explored @slomuseumofart @thrifty.beaches @understory.plantshop @ahlouisstore @booboorecords until we meet again …. 💕💕💕💕 #shareslo @ShareSLO",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7649617364220153101",
@@ -309,7 +658,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7649616383428414733",
@@ -328,7 +695,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7649082138402262286",
@@ -347,7 +732,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7647581369270357261",
@@ -366,7 +769,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7647225659592281358",
@@ -398,7 +819,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7646242265832246542",
@@ -417,7 +856,57 @@
     "wineType": "Sparkling",
     "wineImageUrl": "https://pallini.us/cdn/shop/files/PALLINI-limoncello_2024.jpg?v=1716957967&width=3840",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2022/06/Patio-Potato-Chips.jpg",
-    "category": "recipe"
+    "category": "recipe",
+    "drinkType": "Spritz Recipe",
+    "drinkName": "Limoncello Spritz (Pallini Limoncello + Valdobbiadene Prosecco)",
+    "drinkItems": [
+      {
+        "brand": "Pallini",
+        "product": "Limoncello",
+        "productType": "liqueur",
+        "wineType": "Sparkling",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Valdobbiadene",
+        "product": "Prosecco",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Trader Joe's",
+        "product": "Patio Potato Chips",
+        "category": "chips/snack",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": null,
+        "product": "Caramelized Onion Dip",
+        "category": "dip/spread",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7644695519347952909",
@@ -436,7 +925,25 @@
     "wineType": "Rosé",
     "wineImageUrl": "https://wolffer.com/cdn/shop/files/Summer_in_a_Bottle_Provence.webp",
     "foodImageUrl": null,
-    "category": "porch-pounder"
+    "category": "porch-pounder",
+    "drinkType": "Wine",
+    "drinkName": "Wölffer Estate Summer in a Bottle Rosé",
+    "drinkItems": [
+      {
+        "brand": "Wölffer Estate",
+        "product": "Summer in a Bottle Rosé",
+        "productType": "wine",
+        "wineType": "Rosé",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7644390059516398861",
@@ -455,7 +962,53 @@
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2022/08/sauvignon-republic-sauvignon-blanc-2021.jpg",
     "foodImageUrl": "https://www.traderjoesreviews.com/wp-content/uploads/2014/10/bruschettasauce.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Sauvignon Republic New Zealand Sauvignon Blanc",
+    "drinkItems": [
+      {
+        "brand": "Sauvignon Republic",
+        "product": "New Zealand Sauvignon Blanc",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Bruschetta",
+        "category": "other",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Feta",
+        "category": "cheese",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Lentil Dip",
+        "category": "dip/spread",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7644272565741047054",
@@ -474,7 +1027,53 @@
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2022/08/sauvignon-republic-sauvignon-blanc-2021.jpg",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2026/04/Ketchup-Flavored-Lattice-Potato-Chips.png",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Sauvignon Republic Sauvignon Blanc",
+    "drinkItems": [
+      {
+        "brand": "Sauvignon Republic",
+        "product": "Sauvignon Blanc",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Ketchup Flavored Potato Chips",
+        "category": "chips/snack",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Caramelized Onion Dip",
+        "category": "dip/spread",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Hot Honey Mustard",
+        "category": "condiment",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7643194236938112270",
@@ -493,7 +1092,35 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "recipe"
+    "category": "recipe",
+    "drinkType": "Wine Cocktail Recipe",
+    "drinkName": "Sauvignon Blanc Slushie",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Sauvignon Blanc Slushie",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7643188745759444237",
@@ -512,7 +1139,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7642475776289459469",
@@ -531,7 +1176,44 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": "https://tacobellmenu.org/wp-content/uploads/2026/05/Taco-Bell-Mexican-Pizza-Menu-Item-Image.jpg",
-    "category": "recipe"
+    "category": "recipe",
+    "drinkType": "Wine Cocktail Recipe",
+    "drinkName": "Sauvignon Blanc Slushie",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Sauvignon Blanc Slushie",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Mexican Pizza",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7641444698959236366",
@@ -562,7 +1244,35 @@
     "wineType": "Rosé",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Various Rosés",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Various Rosés",
+        "productType": "wine",
+        "wineType": "Rosé",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Various Snacks",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7639118658790329614",
@@ -594,7 +1304,35 @@
     "wineType": "Sparkling",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Various Sparkling Wines",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Various Sparkling Wines",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Various Snacks",
+        "category": "other",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7638828527743225102",
@@ -613,7 +1351,35 @@
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2020/05/espiral-vinho-verde.jpg",
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Espiral Vinho Verde",
+    "drinkItems": [
+      {
+        "brand": "Espiral",
+        "product": "Vinho Verde",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Takeout Sushi",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7636849214953213198",
@@ -632,7 +1398,25 @@
     "wineType": "White",
     "wineImageUrl": "https://www.kj.com/dw/image/v2/BFTR_PRD/on/demandware.static/-/Sites-jfw-master-catalog/default/dw596aee32/images/0502412/0502412_1.png",
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Spritz Recipe",
+    "drinkName": "Kendall-Jackson Sauvignon Blanc Spritz",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Kendall-Jackson Sauvignon Blanc Spritz",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7636199038169206030",
@@ -651,7 +1435,35 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": "https://tacobellmenu.org/wp-content/uploads/2024/06/taco-bell-cheesy-bean-and-rice-burrito.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Chablis",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Chablis",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "& Rice Burrito (Taco Bell)",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7634267958872739086",
@@ -670,7 +1482,44 @@
     "wineType": "Rosé",
     "wineImageUrl": "https://wolffer.com/cdn/shop/files/sib_long_island_2025.webp",
     "foodImageUrl": "https://sporked.com/wp-content/uploads/2026/04/NPR_TRADER-JOES-BBQ-POTATO-CHIPS_HEADER.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Wölffer Estate Summer in a Bottle Long Island Rosé",
+    "drinkItems": [
+      {
+        "brand": "Wölffer Estate",
+        "product": "Summer in a Bottle Long Island Rosé",
+        "productType": "wine",
+        "wineType": "Rosé",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "BBQ Potato Chips",
+        "category": "chips/snack",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Caramelized Onion Dip",
+        "category": "dip/spread",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7633533370860948749",
@@ -689,7 +1538,44 @@
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2020/05/espiral-vinho-verde.jpg",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2025/06/Spicy-Habanero-Mango-Guacamole.png",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Espiral Vinho Verde",
+    "drinkItems": [
+      {
+        "brand": "Espiral",
+        "product": "Vinho Verde",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Habanero Guac",
+        "category": "dip/spread",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Cowboy Caviar",
+        "category": "dip/spread",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7629865547362028814",
@@ -708,7 +1594,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7628027364768763150",
@@ -727,7 +1631,35 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Duvergey-Taboureau Chablis",
+    "drinkItems": [
+      {
+        "brand": "Duvergey-Taboureau",
+        "product": "Chablis",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Buttered Noodles",
+        "category": "condiment",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7626613170748001549",
@@ -746,7 +1678,25 @@
     "wineType": "White",
     "wineImageUrl": "https://aem.lcbo.com/content/dam/lcbo/products/3/0/8/2/308288.jpg",
     "foodImageUrl": null,
-    "category": "recipe"
+    "category": "recipe",
+    "drinkType": "Wine Cocktail Recipe",
+    "drinkName": "Whitehaven Sauvignon Blanc Slushie",
+    "drinkItems": [
+      {
+        "brand": "Whitehaven",
+        "product": "Sauvignon Blanc Slushie",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7625863680302779662",
@@ -776,7 +1726,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7624669948954152206",
@@ -795,7 +1763,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7624669783283272973",
@@ -814,7 +1800,25 @@
     "wineType": "Unknown",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2025/04/kirkland-signature-prosecco-rose-2023.jpg",
     "foodImageUrl": null,
-    "category": "porch-pounder"
+    "category": "porch-pounder",
+    "drinkType": "Wine",
+    "drinkName": "Kirkland Wine",
+    "drinkItems": [
+      {
+        "brand": "Kirkland Signature",
+        "product": "Wine",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": "Costco",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7624271268589751565",
@@ -833,7 +1837,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7623222925553831182",
@@ -863,7 +1895,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7622486675977030925",
@@ -882,7 +1932,25 @@
     "wineType": "Sparkling",
     "wineImageUrl": "https://bottlestork.com/cdn/shop/files/LaMarca_Prosecco__39057.jpg?v=1759304503&width=800",
     "foodImageUrl": null,
-    "category": "porch-pounder"
+    "category": "porch-pounder",
+    "drinkType": "Spritz Recipe",
+    "drinkName": "Campari Spritz / La Marca Prosecco",
+    "drinkItems": [
+      {
+        "brand": "Campari Group",
+        "product": "Spritz / La Marca Prosecco",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7622478552612523278",
@@ -901,7 +1969,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7622083942694374669",
@@ -920,7 +2006,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7621713987750726926",
@@ -939,7 +2053,35 @@
     "wineType": "White",
     "wineImageUrl": "https://winechateau.com/cdn/shop/products/La-Crema-Chardonnay-Sonoma-Coast-2023.jpg?v=1746043318&width=1445",
     "foodImageUrl": "https://www.trialandeater.com/wp-content/uploads/2021/12/Fromage-Pave-cheese-Trader-Joes-Review-1-4-1024x1024.jpg.webp",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "La Crema Sonoma Coast Chardonnay",
+    "drinkItems": [
+      {
+        "brand": "La Crema Winery",
+        "product": "Sonoma Coast Chardonnay",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Fromage Pavé Soft Ripened Cheese",
+        "category": "cheese",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7621338263369813261",
@@ -968,7 +2110,35 @@
     "wineType": "Rosé",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Various Rosés",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Various Rosés",
+        "productType": "wine",
+        "wineType": "Rosé",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Various Snacks",
+        "category": "other",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7620635977937194254",
@@ -987,7 +2157,35 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Sancerre",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Sancerre",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Tuna Melt",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7620161550464158990",
@@ -1017,7 +2215,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7618760523391323405",
@@ -1036,7 +2252,35 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Pinot Noir",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Pinot Noir",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7618444378779995405",
@@ -1055,7 +2299,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7616549078939208973",
@@ -1074,7 +2336,44 @@
     "wineType": "White",
     "wineImageUrl": "https://cdn.shoplightspeed.com/shops/626811/files/72363289/650x750x2/justin-central-coast-chardonnay-2023-750ml.jpg",
     "foodImageUrl": "https://www.tastingtable.com/img/gallery/taco-bells-chicken-bacon-ranch-offerings-are-uneven-menu-additions/intro-1771526576.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Justin Central Coast Chardonnay",
+    "drinkItems": [
+      {
+        "brand": "Justin Vineyards & Winery",
+        "product": "Central Coast Chardonnay",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Chalupa",
+        "category": "charcuterie",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Taco Bell",
+        "product": "(Taco Bell)",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7616224773785308430",
@@ -1093,7 +2392,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7615429395636817166",
@@ -1112,7 +2429,35 @@
     "wineType": "Sparkling",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Various Sparkling Wines",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Various Sparkling Wines",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Snacks",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7614285651558649102",
@@ -1131,7 +2476,35 @@
     "wineType": "Red",
     "wineImageUrl": "https://vinovoss.com/images/bottles/03f9dcaf26c14bdcb877afd14de75879.webp",
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Maison Joseph Drouhin Bourgogne Pinot Noir",
+    "drinkItems": [
+      {
+        "brand": "Joseph Drouhin",
+        "product": "Bourgogne Pinot Noir",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Beef Stroganoff",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7613197713143909662",
@@ -1150,7 +2523,35 @@
     "wineType": "Sparkling",
     "wineImageUrl": "https://winestatistics.com/wp-content/uploads/2025/11/cecilia_beretta_coneglianovaldobbiadene_proseccosuperiore_brut_2023.png",
     "foodImageUrl": "https://sporked.com/wp-content/uploads/2026/02/NEWS_TRADER-JOES-COCONUT-MINI-SHEET-CAKE_HEADER.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Cecilia Beretta Conegliano-Valdobbiadene Prosecco",
+    "drinkItems": [
+      {
+        "brand": "Cecilia Beretta",
+        "product": "Conegliano-Valdobbiadene Prosecco",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Toasted Coconut Sheet Cake",
+        "category": "chips/snack",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7612739360261213454",
@@ -1169,7 +2570,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7612030786799176973",
@@ -1188,7 +2607,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7611645286116642061",
@@ -1207,7 +2644,35 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Lambrusco / Rosé / Sangiovese / Zinfandel / Grüner Veltliner",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Lambrusco / Rosé / Sangiovese / Zinfandel / Grüner Veltliner",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7609038223909670158",
@@ -1226,7 +2691,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Cocktail Recipe",
+    "drinkName": "Cocktail",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Cocktail",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7607701027382480142",
@@ -1245,7 +2738,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7606145656859708686",
@@ -1264,7 +2775,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7606041062829804814",
@@ -1300,7 +2829,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Various Wines",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Various Wines",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Various Snacks",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7603604331241180430",
@@ -1340,7 +2897,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Various Wines",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Various Wines",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Various Snacks",
+        "category": "other",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7603178799307558158",
@@ -1359,7 +2944,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7600988066215431437",
@@ -1378,7 +2981,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7598647968664718647",
@@ -1397,7 +3018,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7598334657578470669",
@@ -1416,7 +3055,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7597253540188359991",
@@ -1435,7 +3102,35 @@
     "wineType": "Red",
     "wineImageUrl": "https://woodencork.com/cdn/shop/products/338992_68c120c4-cae9-416f-8fbd-ae53fd3da343.jpg?v=1699066860&width=1080",
     "foodImageUrl": "https://www.clubtraderjoes.com/wp-content/uploads/2012/01/TraderJoesMovieTheaterPopcornName.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Josh Cellars Pinot Noir",
+    "drinkItems": [
+      {
+        "brand": "Josh Cellars",
+        "product": "Pinot Noir",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Buttered Popcorn",
+        "category": "chips/snack",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7597217603022490894",
@@ -1454,7 +3149,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7596173479473401102",
@@ -1473,7 +3186,53 @@
     "wineType": "White",
     "wineImageUrl": "https://www.nicholaswines.com/wp-content/uploads/Jean-Marc-Brocard-Sainte-Claire-Chablis-2022.jpg",
     "foodImageUrl": "https://lafromageriesf.com/cdn/shop/products/delicedeborgogne_burned__57199_1200x.png?v=1593198033",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Domaines Brocard Sainte Céline Chablis",
+    "drinkItems": [
+      {
+        "brand": "Domaines Brocard",
+        "product": "Sainte Céline Chablis",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "La Délice",
+        "product": "de Bourgogne",
+        "category": "cheese",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Nabisco",
+        "product": "Crackers",
+        "category": "bread/crackers",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": null,
+        "product": "Pepper Jelly",
+        "category": "condiment",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7594535923665210638",
@@ -1492,7 +3251,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7593166675105647927",
@@ -1511,7 +3288,44 @@
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2020/05/espiral-vinho-verde.jpg",
     "foodImageUrl": "https://www.onlytastygoods.com/cdn/shop/files/trader-joes-organic-elote-corn-chip-dippers-snacks-9-75-oz-01.jpg?v=1772419752&width=1946",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Espiral Vinho Verde",
+    "drinkItems": [
+      {
+        "brand": "Espiral",
+        "product": "Vinho Verde",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Elote Corn Dippers",
+        "category": "dip/spread",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "White Queso",
+        "category": "dip/spread",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7592087417272716558",
@@ -1530,7 +3344,53 @@
     "wineType": "Red",
     "wineImageUrl": "https://vinovoss.com/images/bottles/03f9dcaf26c14bdcb877afd14de75879.webp",
     "foodImageUrl": "https://www.becomebetty.com/wp-content/uploads/2017/05/20170505_173403-1-e1494248594395-768x1024.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Joseph Drouhin Burgundy",
+    "drinkItems": [
+      {
+        "brand": "Joseph Drouhin",
+        "product": "Burgundy",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Triple Cream Brie",
+        "category": "cheese",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": "Nabisco",
+        "product": "Crackers",
+        "category": "bread/crackers",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Kerrygold",
+        "product": "Butter",
+        "category": "condiment",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7590505559929949495",
@@ -1549,7 +3409,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7589361802526362935",
@@ -1568,7 +3446,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7586840060931083534",
@@ -1587,7 +3483,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7585505979878608142",
@@ -1606,7 +3530,53 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2020/11/Organic-Italian-Olives.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Gavi",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Gavi",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Italian Olives",
+        "category": "pickled/preserved",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Prosciutto-Wrapped Mozzarella",
+        "category": "cheese",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Rosemary Nuts",
+        "category": "chips/snack",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7584974411288071479",
@@ -1625,7 +3595,44 @@
     "wineType": "White",
     "wineImageUrl": "https://images.squarespace-cdn.com/content/v1/67a74865610a88774386fe2c/1739407014711-FMPCWPAGVZ3TVBZDTS05/IMG_7762.jpeg",
     "foodImageUrl": "https://tacobellmenu.org/wp-content/uploads/2024/06/taco-bell-cheesy-bean-and-rice-burrito.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "La Vauvise Sancerre Le Trois Terroirs",
+    "drinkItems": [
+      {
+        "brand": "La Vauvise",
+        "product": "Sancerre Le Trois Terroirs",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "& Rice Burrito",
+        "category": "meal",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Taco Bell",
+        "product": "Supreme (Taco Bell)",
+        "category": "meal",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7582803309589826829",
@@ -1644,7 +3651,35 @@
     "wineType": "White",
     "wineImageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtjnAuFMVHdU5-yv13TULfuGHmn0u2C9bkK3gScGKvSVfrbnYCpQm56gfN9gDfsqaoa9ilVGHf38hp7yJbC6iSVv82AvEZof6nG-vxBPJMZtxeXrfI7Rok9MT7pocWgRDYMQjwvaNh1Ph52ji_ZxsBBIZ7_CuCbevxanXO3ugveqNDtUXu6tItVy0lptMB/s4680/jDSC09648-%20Chablis%201er%20CRU%20II.jpg",
     "foodImageUrl": "https://www.trialandeater.com/wp-content/uploads/2021/12/Fromage-Pave-cheese-Trader-Joes-Review-1-4-1024x1024.jpg.webp",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Duvergey-Taboureau Chablis 1er Cru",
+    "drinkItems": [
+      {
+        "brand": "Duvergey-Taboureau",
+        "product": "Chablis 1er Cru",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Fromage Pavé",
+        "category": "other",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7582328534966734093",
@@ -1663,7 +3698,35 @@
     "wineType": "Red",
     "wineImageUrl": "https://bottlestork.com/cdn/shop/files/Dry-Creek-Vineyard-Heritage-Vines-Zinfandel__76465.jpg?v=1759306682&width=800",
     "foodImageUrl": "https://images.heb.com/is/image/HEBGrocery/000599707-1?jpegSize=150&hei=1400&fit=constrain&qlt=75&v=1",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Dry Creek Vineyard Zinfandel",
+    "drinkItems": [
+      {
+        "brand": "Dry Creek Vineyard",
+        "product": "Zinfandel",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Little Debbie Chocolate Christmas Tree Cakes",
+        "category": "sweet/dessert",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7581576925466938679",
@@ -1682,7 +3745,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7580211093587381518",
@@ -1701,7 +3782,35 @@
     "wineType": "Red",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2022/12/patroferno-appassimento-puglia-primitivo.jpg",
     "foodImageUrl": "https://www.becomebetty.com/wp-content/uploads/2017/11/Trader-Joes-Mini-Dark-Chocolate-Mint-Stars.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Patroferno Appassimento Primitivo Puglia IGT",
+    "drinkItems": [
+      {
+        "brand": "Patroferno",
+        "product": "Appassimento Primitivo Puglia IGT",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Mini Dark Chocolate Mint Stars ⭐️",
+        "category": "sweet/dessert",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7579768313597758733",
@@ -1720,7 +3829,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7578986453615660343",
@@ -1739,7 +3866,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7574193337029233975",
@@ -1758,7 +3913,35 @@
     "wineType": "Sparkling",
     "wineImageUrl": "https://cheapwinefinder.b-cdn.net/wp-content/uploads/2016/12/laburgundie2-e1482896895577.webp",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2025/11/English-Cheddar-with-Champagne.png",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "La Burgondie Crémant de Bourgogne Reserve Brut",
+    "drinkItems": [
+      {
+        "brand": "La Burgondie",
+        "product": "Crémant de Bourgogne Reserve Brut",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Seasonal English Cheddar with Champagne",
+        "category": "cheese",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7572300540671970574",
@@ -1777,7 +3960,35 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Garnacha / Rosé / Pinot Noir / Cava / Sancerre",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Garnacha / Rosé / Pinot Noir / Cava / Sancerre",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7569432750789348622",
@@ -1796,7 +4007,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7568650486090353975",
@@ -1815,7 +4044,44 @@
     "wineType": "White",
     "wineImageUrl": "https://cheapwinefinder.com/wp-content/uploads/2025/09/Oak-Knoll.jpg.webp",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2022/01/Unexpected-Cheddar.png",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Trader Joe's Grand Reserve Oak Knoll Chardonnay",
+    "drinkItems": [
+      {
+        "brand": "Trader Joe's",
+        "product": "Oak Knoll Chardonnay",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Unexpected Cheddar",
+        "category": "cheese",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Maple Butter",
+        "category": "condiment",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7567628117506870542",
@@ -1834,7 +4100,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7567075158041709879",
@@ -1853,7 +4137,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7560425711882734861",
@@ -1872,7 +4174,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7557186847495982391",
@@ -1891,7 +4221,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7555996674435468599",
@@ -1910,7 +4258,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7553108725196803383",
@@ -1933,7 +4299,35 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Taco Bell",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7550392124043185463",
@@ -1952,7 +4346,44 @@
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2025/08/super-happy-sauvignon-blanc-trader-joes.jpg",
     "foodImageUrl": "https://townsquare.media/site/204/files/2025/04/attachment-Untitled-design-2025-04-09T070103.578.jpg?w=980&q=75",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Super Happy Sauvignon Blanc",
+    "drinkItems": [
+      {
+        "brand": "Super Happy",
+        "product": "Sauvignon Blanc",
+        "productType": "wine",
+        "wineType": "White",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": "Taco Bell",
+        "product": "Locos Taco",
+        "category": "chips/snack",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Taco Bell",
+        "product": "(Taco Bell)",
+        "category": "fruit",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ]
   },
   {
     "id": "7548506030116752653",
@@ -1971,7 +4402,53 @@
     "wineType": "White",
     "wineImageUrl": "http://costcowineblog.com/wp-content/uploads/2024/03/IMG_0050.jpg",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2022/09/Hot-Sweet-Pepper-Jelly.png",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Comte de la Chevalière Sancerre",
+    "drinkItems": [
+      {
+        "brand": "Comte de la Chevalière",
+        "product": "Sancerre",
+        "productType": "wine",
+        "wineType": "White",
+        "store": "Trader Joe's",
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Pepper Jelly",
+        "category": "condiment",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Brie Cheese",
+        "category": "cheese",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Baguette",
+        "category": "bread/crackers",
+        "store": "Trader Joe's",
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7548231728209366286",
@@ -1990,7 +4467,44 @@
     "wineType": "Red",
     "wineImageUrl": "https://images.squarespace-cdn.com/content/v1/5f6e966f5f74dc06edeeca1b/1615228400425-8HN45P4ER976ORO7B8QK/updatedcastorica+amarone.jpg",
     "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2024/09/Red-Leicester-Cheese.png",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Ca'Storica Amarone della Valpolicella",
+    "drinkItems": [
+      {
+        "brand": "Ca'Storica",
+        "product": "Amarone della Valpolicella",
+        "productType": "wine",
+        "wineType": "Red",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "Red Leicester Cheese",
+        "category": "cheese",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      },
+      {
+        "brand": null,
+        "product": "Sugarbee Apple",
+        "category": "fruit",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7547414332947189006",
@@ -2009,7 +4523,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7546668621074910478",
@@ -2028,7 +4560,35 @@
     "wineType": "Sparkling",
     "wineImageUrl": "https://www.mummnapa.com/wp-content/uploads/2024/05/Mumm-Napa-Brut-Rose-1.webp",
     "foodImageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjjs63M_hiBFVINXjkYnS649bvSMIw5Nodg7DvCudX8rKKFbgP48yP3Y0yfYp9bmJPHIm9PfzmIvPRNVZOAwUv5N5hzURIfIBqxGz0CvOGMuD7S13moc190Fdhcxlgq3RfLkQL-SoWTwsh5_sGJueaJApSjtBvB14isLj8Fgn3ZnzB6L4Y7vgnEm8D-wU/s640/mcdonalds-snack-wrap-01.jpg",
-    "category": "pairing"
+    "category": "pairing",
+    "drinkType": "Wine",
+    "drinkName": "Sparkling Rosé (Faff Wine / Mumm)",
+    "drinkItems": [
+      {
+        "brand": "Faff Wine",
+        "product": "/ Mumm",
+        "productType": "wine",
+        "wineType": "Sparkling",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": false
+      }
+    ],
+    "foodItems": [
+      {
+        "brand": null,
+        "product": "McDonald's Spicy Ranch Snack Wrap",
+        "category": "meal",
+        "store": null,
+        "price": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ]
   },
   {
     "id": "7546330017031048462",
@@ -2047,7 +4607,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7546028130377518349",
@@ -2066,7 +4644,25 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   },
   {
     "id": "7545688178619895054",
@@ -2085,6 +4681,24 @@
     "wineType": "Unknown",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden"
+    "category": "hidden",
+    "drinkType": "Wine",
+    "drinkName": "Unknown",
+    "drinkItems": [
+      {
+        "brand": null,
+        "product": "Unknown",
+        "productType": "wine",
+        "wineType": "N/A",
+        "store": null,
+        "region": null,
+        "vintage": null,
+        "price": null,
+        "amount": null,
+        "notes": null,
+        "needsReview": true
+      }
+    ],
+    "foodItems": []
   }
 ]
