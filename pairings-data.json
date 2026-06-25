@@ -269,12 +269,12 @@
     "views": 41500,
     "hashtags": [],
     "wine": "Aperol Spritz",
-    "food": "Nacho Supreme Dip / Mexican Pizza",
+    "food": "Nacho Supreme + Mexican Pizza",
     "store": "Unknown",
     "wineType": "Sparkling",
     "wineImageUrl": "https://caskcartel.com/cdn/shop/products/aperol-3l-liqueur.jpg",
     "foodImageUrl": null,
-    "category": "hidden",
+    "category": "pairing",
     "drinkType": "Spritz Recipe",
     "drinkName": "Aperol Spritz",
     "drinkItems": [
@@ -283,10 +283,10 @@
         "product": "Spritz",
         "productType": "liqueur",
         "wineType": "Sparkling",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -295,9 +295,9 @@
     "foodItems": [
       {
         "brand": "Taco Bell",
-        "product": "Dip",
-        "category": "dip/spread",
-        "store": null,
+        "product": "Nacho Supreme",
+        "category": "meal",
+        "store": "Unknown",
         "price": null,
         "notes": null,
         "needsReview": false
@@ -306,7 +306,7 @@
         "brand": "Taco Bell",
         "product": "Mexican Pizza",
         "category": "meal",
-        "store": null,
+        "store": "Unknown",
         "price": null,
         "notes": null,
         "needsReview": false
@@ -416,8 +416,8 @@
     "food": "Krinkle Cut Himalayan Salt Potato Chips",
     "store": "Costco",
     "wineType": "Sparkling",
-    "wineImageUrl": null,
-    "foodImageUrl": null,
+    "wineImageUrl": "https://www.instacart.com/assets/domains/product-image/file/large_8bb9d0f4-9d0d-4478-8f2d-2e79d5116a7c.jpeg",
+    "foodImageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR5BvSxRNzVMZXArAC_0rWvytUGikeefO7B8yllF2R99qjRkY7vExckv7TDG3yuqPRkuQP7YOwG9hgPmZQtQAn0GTkzdGC2_A",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Asolo Prosecco",
@@ -479,8 +479,8 @@
     "food": "Hot & Spicy",
     "store": "Unknown",
     "wineType": "Sparkling",
-    "wineImageUrl": null,
-    "foodImageUrl": null,
+    "wineImageUrl": "https://www.totalwine.com/images/8662750/8662750-1-fr.png",
+    "foodImageUrl": "https://images.heb.com/is/image/HEBGrocery/001666625-1",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Brut",
@@ -542,8 +542,8 @@
     "food": "Patio Chips + Caramelized Onion Dip",
     "store": "Trader Joe's",
     "wineType": "Sparkling",
-    "wineImageUrl": null,
-    "foodImageUrl": null,
+    "wineImageUrl": "https://images.vivino.com/thumbs/-K7MUuNGRCO_6cJrcTkWfA_pb_x960.png",
+    "foodImageUrl": "https://rwolfe1979.github.io/assets/images/patiochips+caraoniondip.jpg",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
@@ -614,8 +614,8 @@
     "food": "Cheddar & Sour Cream Potato Chips",
     "store": "Unknown",
     "wineType": "Sparkling",
-    "wineImageUrl": null,
-    "foodImageUrl": null,
+    "wineImageUrl": "https://www.totalwine.com/dynamic/x1000,sq/images/98620750/98620750-1-fr.png",
+    "foodImageUrl": "https://www.ruffles.com/sites/ruffles.com/files//2024-02/Ruffles%20CSC%202024.png",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Prosecco",
@@ -646,223 +646,6 @@
       }
     ],
     "originalPostId": "7651757574487805198",
-    "isMultiPairingSplit": true
-  },
-  {
-    "id": "7651757574487805198_r0",
-    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
-    "date": "2026-06-15T22:47:46.000Z",
-    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
-    "thumbnailUrl": null,
-    "isSlideshow": false,
-    "slideshowImages": [],
-    "likes": 245,
-    "views": 5070,
-    "hashtags": [],
-    "wine": "Asolo Prosecco",
-    "food": "Krinkle Cut Himalayan Salt Potato Chips",
-    "store": "Costco",
-    "wineType": "Sparkling",
-    "wineImageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/b9b27d6be2b643ef8a984e52c5c8396b~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=pANJGYudbNoY7q1Z8ZH55%2FQ9U6I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
-    "foodImageUrl": null,
-    "category": "pairing",
-    "drinkType": "Wine",
-    "drinkName": "Asolo Prosecco",
-    "drinkItems": [
-      {
-        "brand": "Kirkland",
-        "product": "Asolo Prosecco",
-        "productType": "wine",
-        "wineType": "Sparkling",
-        "store": "Costco",
-        "price": null,
-        "vintage": null,
-        "region": null,
-        "amount": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "foodItems": [
-      {
-        "brand": "Kirkland",
-        "product": "Krinkle Cut Himalayan Salt Potato Chips",
-        "category": "other",
-        "store": "Unknown",
-        "price": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "originalPostId": "7651757574487805198",
-    "categories": [
-      "pairing"
-    ],
-    "isMultiPairingSplit": true
-  },
-  {
-    "id": "7651757574487805198_r1",
-    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
-    "date": "2026-06-15T22:47:46.000Z",
-    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
-    "thumbnailUrl": null,
-    "isSlideshow": false,
-    "slideshowImages": [],
-    "likes": 245,
-    "views": 5070,
-    "hashtags": [],
-    "wine": "Brut",
-    "food": "Hot & Spicy",
-    "store": "Unknown",
-    "wineType": "Sparkling",
-    "wineImageUrl": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/556ae68be81548daa5a580350f059b13~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=2i0pccHJbKMfT3f8wejLpFX7mH8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
-    "foodImageUrl": null,
-    "category": "pairing",
-    "drinkType": "Wine",
-    "drinkName": "Brut",
-    "drinkItems": [
-      {
-        "brand": "Gruet",
-        "product": "Brut",
-        "productType": "wine",
-        "wineType": "Sparkling",
-        "store": "Unknown",
-        "price": null,
-        "vintage": null,
-        "region": null,
-        "amount": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "foodItems": [
-      {
-        "brand": "Cheez It",
-        "product": "Hot & Spicy",
-        "category": "chips/snack",
-        "store": "Unknown",
-        "price": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "originalPostId": "7651757574487805198",
-    "categories": [
-      "pairing"
-    ],
-    "isMultiPairingSplit": true
-  },
-  {
-    "id": "7651757574487805198_r2",
-    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
-    "date": "2026-06-15T22:47:46.000Z",
-    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
-    "thumbnailUrl": null,
-    "isSlideshow": false,
-    "slideshowImages": [],
-    "likes": 245,
-    "views": 5070,
-    "hashtags": [],
-    "wine": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
-    "food": "Patio Chips + Caramelized Onion Dip",
-    "store": "Trader Joe's",
-    "wineType": "Sparkling",
-    "wineImageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/1eb24ee9dd464de1b9a019f72a681f4f~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=w%2B7FqEEAi00hMr2dR5PvW8h9tHQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
-    "foodImageUrl": null,
-    "category": "pairing",
-    "drinkType": "Wine",
-    "drinkName": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
-    "drinkItems": [
-      {
-        "brand": "Cecilia Beretta",
-        "product": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
-        "productType": "wine",
-        "wineType": "Sparkling",
-        "store": "Trader Joe's",
-        "price": null,
-        "vintage": null,
-        "region": null,
-        "amount": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "foodItems": [
-      {
-        "brand": "Trader Joe's",
-        "product": "Patio Chips",
-        "category": "chips/snack",
-        "store": "Trader Joe's",
-        "price": null,
-        "notes": null,
-        "needsReview": false
-      },
-      {
-        "brand": "Trader Joe's",
-        "product": "Caramelized Onion Dip",
-        "category": "dip/spread",
-        "store": "Trader Joe's",
-        "price": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "originalPostId": "7651757574487805198",
-    "categories": [
-      "pairing"
-    ],
-    "isMultiPairingSplit": true
-  },
-  {
-    "id": "7651757574487805198_r3",
-    "text": "all under $20, easy to find, and Certified Sommelier Approved ✔️ PLUS my favorite snack pairing for each 🙌🏼 SWIPE → and SAVE for your next summer gathering!!!\n\n#spritztok #spritz #winetiktok🍷 ",
-    "date": "2026-06-15T22:47:46.000Z",
-    "url": "https://www.tiktok.com/@samanthasommelier/video/7651757574487805198",
-    "thumbnailUrl": null,
-    "isSlideshow": false,
-    "slideshowImages": [],
-    "likes": 245,
-    "views": 5070,
-    "hashtags": [],
-    "wine": "Prosecco",
-    "food": "Cheddar & Sour Cream Potato Chips",
-    "store": "Unknown",
-    "wineType": "Sparkling",
-    "wineImageUrl": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-i-photomode-tx/9b5108aa134b484894bc404c65a8d0c5~tplv-photomode-image.jpeg?dr=9616&x-expires=1782500400&x-signature=DNXKWXkxVNfePZTC00K%2FOf01%2FN8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=useast5&ftpl=1",
-    "foodImageUrl": null,
-    "category": "pairing",
-    "drinkType": "Wine",
-    "drinkName": "Prosecco",
-    "drinkItems": [
-      {
-        "brand": "Mionetto",
-        "product": "Prosecco",
-        "productType": "wine",
-        "wineType": "Sparkling",
-        "store": "Unknown",
-        "price": null,
-        "vintage": null,
-        "region": null,
-        "amount": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "foodItems": [
-      {
-        "brand": "Ruffles",
-        "product": "Cheddar & Sour Cream Potato Chips",
-        "category": "chips/snack",
-        "store": "Unknown",
-        "price": null,
-        "notes": null,
-        "needsReview": false
-      }
-    ],
-    "originalPostId": "7651757574487805198",
-    "categories": [
-      "pairing"
-    ],
     "isMultiPairingSplit": true
   },
   {
@@ -1434,25 +1217,25 @@
     "likes": 4394,
     "views": 88500,
     "hashtags": [],
-    "wine": "Sauvignon Republic New Zealand Sauvignon Blanc",
-    "food": "Bruschetta / Feta / Lentil Dip",
+    "wine": "Sauvignon Republic Sauvignon Blanc",
+    "food": "Bruschetta + Feta + Lentil Dip",
     "store": "Trader Joe's",
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2022/08/sauvignon-republic-sauvignon-blanc-2021.jpg",
     "foodImageUrl": "https://www.traderjoesreviews.com/wp-content/uploads/2014/10/bruschettasauce.jpg",
     "category": "pairing",
     "drinkType": "Wine",
-    "drinkName": "Sauvignon Republic New Zealand Sauvignon Blanc",
+    "drinkName": "Sauvignon Republic Sauvignon Blanc",
     "drinkItems": [
       {
         "brand": "Sauvignon Republic",
-        "product": "New Zealand Sauvignon Blanc",
+        "product": "Sauvignon Blanc",
         "productType": "wine",
         "wineType": "White",
         "store": "Trader Joe's",
-        "region": null,
-        "vintage": null,
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -1466,7 +1249,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
@@ -1475,7 +1258,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
@@ -1484,7 +1267,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -1828,7 +1611,7 @@
     "store": "Unknown",
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2020/05/espiral-vinho-verde.jpg",
-    "foodImageUrl": null,
+    "foodImageUrl": "https://images.squarespace-cdn.com/content/v1/60f7670a6d592e0d10b9eb2f/ee6da281-8654-4ac2-95de-120ba31b102b/Untitled-2686.jpg",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Espiral Vinho Verde",
@@ -1838,10 +1621,10 @@
         "product": "Vinho Verde",
         "productType": "wine",
         "wineType": "White",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -1852,10 +1635,10 @@
         "brand": null,
         "product": "Takeout Sushi",
         "category": "other",
-        "store": null,
+        "store": "Unknown",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -1913,7 +1696,7 @@
     "wineType": "White",
     "wineImageUrl": null,
     "foodImageUrl": "https://tacobellmenu.org/wp-content/uploads/2024/06/taco-bell-cheesy-bean-and-rice-burrito.jpg",
-    "category": "hidden",
+    "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Chablis",
     "drinkItems": [
@@ -2103,25 +1886,25 @@
     "likes": 9765,
     "views": 65300,
     "hashtags": [],
-    "wine": "Duvergey-Taboureau Chablis",
-    "food": "Buttered Noodles",
+    "wine": "Duvergey-Taboureau Chablis + Butter Pasta",
+    "food": "Pasta + Butter + Parmesan",
     "store": "Unknown",
     "wineType": "White",
-    "wineImageUrl": null,
-    "foodImageUrl": null,
+    "wineImageUrl": "https://images.squarespace-cdn.com/content/v1/67a74865610a88774386fe2c/422bd076-fd54-4e40-a8f3-870e79e6a810/IMG_4463.jpeg?format=2500w",
+    "foodImageUrl": "https://www.allrecipes.com/thmb/IAP81Be7Nyly6t_Wkq1uYKzH-qo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/244458-buttered-noodles-DDMFS-4x3-b9931662efa64b37883c0f73b296b124.jpg",
     "category": "pairing",
     "drinkType": "Wine",
-    "drinkName": "Duvergey-Taboureau Chablis",
+    "drinkName": "Duvergey-Taboureau Chablis + Butter Pasta",
     "drinkItems": [
       {
         "brand": "Duvergey-Taboureau",
         "product": "Chablis",
         "productType": "wine",
         "wineType": "White",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -2130,12 +1913,30 @@
     "foodItems": [
       {
         "brand": null,
-        "product": "Buttered Noodles",
-        "category": "condiment",
-        "store": null,
+        "product": "Pasta",
+        "category": "other",
+        "store": "Unknown",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
+      },
+      {
+        "brand": null,
+        "product": "Butter",
+        "category": "other",
+        "store": "Unknown",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": null,
+        "product": "Parmesan",
+        "category": "other",
+        "store": "Unknown",
+        "price": null,
+        "notes": null,
+        "needsReview": false
       }
     ]
   },
@@ -2633,35 +2434,35 @@
     "food": "Tuna Melt",
     "store": "Unknown",
     "wineType": "White",
-    "wineImageUrl": null,
-    "foodImageUrl": null,
+    "wineImageUrl": "https://www.totalwine.com/images/237553750/237553750-1-fr.png",
+    "foodImageUrl": "https://www.foodandwine.com/thmb/f-Y63_uOCJ0eD43R7J77KLaRSMg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Spicy-Tuna-Melt-FT-RECIPE0126-5904e524667a486d83bc52e9fae4f31b.jpg",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Sancerre",
     "drinkItems": [
       {
-        "brand": null,
-        "product": "Sancerre",
+        "brand": "Patient Cottat",
+        "product": "Sancerre Anciennes Vignes",
         "productType": "wine",
         "wineType": "White",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ],
     "foodItems": [
       {
         "brand": null,
         "product": "Tuna Melt",
-        "category": "other",
-        "store": null,
+        "category": "meal",
+        "store": "Unknown",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -2730,7 +2531,7 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden",
+    "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Pinot Noir",
     "drinkItems": [
@@ -2907,7 +2708,7 @@
     "wineType": "Sparkling",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden",
+    "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Various Sparkling Wines",
     "drinkItems": [
@@ -2953,7 +2754,7 @@
     "store": "Unknown",
     "wineType": "Red",
     "wineImageUrl": "https://vinovoss.com/images/bottles/03f9dcaf26c14bdcb877afd14de75879.webp",
-    "foodImageUrl": null,
+    "foodImageUrl": "https://substackcdn.com/image/fetch/$s_!7bOK!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8af14849-8274-4a33-90e6-781fd539f29b_1152x1801.jpeg",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Maison Joseph Drouhin Bourgogne Pinot Noir",
@@ -2963,10 +2764,10 @@
         "product": "Bourgogne Pinot Noir",
         "productType": "wine",
         "wineType": "Red",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -2977,10 +2778,10 @@
         "brand": null,
         "product": "Beef Stroganoff",
         "category": "other",
-        "store": null,
+        "store": "Unknown",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -3122,7 +2923,7 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden",
+    "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Lambrusco / Rosé / Sangiovese / Zinfandel / Grüner Veltliner",
     "drinkItems": [
@@ -4006,24 +3807,24 @@
     "food": "Italian Olives + Prosciutto-Wrapped Mozzarella + Rosemary Nuts",
     "store": "Trader Joe's",
     "wineType": "White",
-    "wineImageUrl": null,
-    "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2020/11/Organic-Italian-Olives.jpg",
+    "wineImageUrl": "https://www.rosadellolmo.it/img/gavi-bottiglia-rett.png",
+    "foodImageUrl": "https://rwolfe1979.github.io/assets/images/olive+PM+RN.png",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Gavi",
     "drinkItems": [
       {
-        "brand": null,
+        "brand": "Rosa dell'Olmo",
         "product": "Gavi",
         "productType": "wine",
         "wineType": "White",
         "store": "Trader Joe's",
-        "region": null,
-        "vintage": null,
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ],
     "foodItems": [
@@ -4034,7 +3835,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
@@ -4043,7 +3844,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
@@ -4052,7 +3853,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -4258,7 +4059,7 @@
     "food": "Mini Dark Chocolate Mint Stars ⭐️",
     "store": "Unknown",
     "wineType": "Red",
-    "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2022/12/patroferno-appassimento-puglia-primitivo.jpg",
+    "wineImageUrl": "https://images.squarespace-cdn.com/content/v1/67a74865610a88774386fe2c/1739407327616-XKE9JC5Z1V0S3T78DMI0/IMG_4076.jpeg?format=2500w",
     "foodImageUrl": "https://www.becomebetty.com/wp-content/uploads/2017/11/Trader-Joes-Mini-Dark-Chocolate-Mint-Stars.jpg",
     "category": "pairing",
     "drinkType": "Wine",
@@ -4266,13 +4067,13 @@
     "drinkItems": [
       {
         "brand": "Patroferno",
-        "product": "Appassimento Primitivo Puglia IGT",
+        "product": "Appassimento Puglia Primitivo",
         "productType": "wine",
         "wineType": "Red",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -4283,10 +4084,10 @@
         "brand": null,
         "product": "Mini Dark Chocolate Mint Stars ⭐️",
         "category": "sweet/dessert",
-        "store": null,
+        "store": "Unknown",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -4386,11 +4187,11 @@
     "views": 64500,
     "hashtags": [],
     "wine": "La Burgondie Crémant de Bourgogne Reserve Brut",
-    "food": "Seasonal English Cheddar with Champagne",
+    "food": "English Cheddar Cheese with Champagne",
     "store": "Trader Joe's",
     "wineType": "Sparkling",
-    "wineImageUrl": "https://cheapwinefinder.b-cdn.net/wp-content/uploads/2016/12/laburgundie2-e1482896895577.webp",
-    "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2025/11/English-Cheddar-with-Champagne.png",
+    "wineImageUrl": "https://www.traderjoes.com/content/dam/trjo/products/m306/wine/58288.png/jcr:content/renditions/webp-1280.webp",
+    "foodImageUrl": "https://www.traderjoes.com/content/dam/trjo/products/m20203/82001.png/jcr:content/renditions/cq5dam.web.1280.1280",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "La Burgondie Crémant de Bourgogne Reserve Brut",
@@ -4401,9 +4202,9 @@
         "productType": "wine",
         "wineType": "Sparkling",
         "store": "Trader Joe's",
-        "region": null,
-        "vintage": null,
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -4411,13 +4212,13 @@
     ],
     "foodItems": [
       {
-        "brand": null,
-        "product": "Seasonal English Cheddar with Champagne",
+        "brand": "Trader Joe's",
+        "product": "English Cheddar Cheese with Champagne",
         "category": "cheese",
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -4438,7 +4239,7 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "hidden",
+    "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Garnacha / Rosé / Pinot Noir / Cava / Sancerre",
     "drinkItems": [
@@ -4520,8 +4321,8 @@
     "food": "Unexpected Cheddar + Maple Butter",
     "store": "Trader Joe's",
     "wineType": "White",
-    "wineImageUrl": "https://cheapwinefinder.com/wp-content/uploads/2025/09/Oak-Knoll.jpg.webp",
-    "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2022/01/Unexpected-Cheddar.png",
+    "wineImageUrl": "https://www.traderjoes.com/content/dam/trjo/products/m306/wine/51341.png/jcr:content/renditions/webp-1280.webp",
+    "foodImageUrl": "https://rwolfe1979.github.io/assets/images/TJMB+UCC.png",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Trader Joe's Grand Reserve Oak Knoll Chardonnay",
@@ -4532,9 +4333,9 @@
         "productType": "wine",
         "wineType": "White",
         "store": "Trader Joe's",
-        "region": null,
-        "vintage": null,
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -4542,22 +4343,22 @@
     ],
     "foodItems": [
       {
-        "brand": null,
+        "brand": "Trader Joe's",
         "product": "Unexpected Cheddar",
         "category": "cheese",
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
-        "brand": null,
+        "brand": "Trader Joe's",
         "product": "Maple Butter",
         "category": "condiment",
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -4819,7 +4620,7 @@
     "views": 17000,
     "hashtags": [],
     "wine": "Super Happy Sauvignon Blanc",
-    "food": "Cool Ranch Doritos Locos Taco / Caramel Apple Empanada (Taco Bell)",
+    "food": "Cool Ranch Doritos Los Taco Supreme + Double Decker Taco Supreme + Carmel Apple Empanada",
     "store": "Unknown",
     "wineType": "White",
     "wineImageUrl": "https://www.reversewinesnob.com/wp-content/uploads/2025/08/super-happy-sauvignon-blanc-trader-joes.jpg",
@@ -4833,10 +4634,10 @@
         "product": "Sauvignon Blanc",
         "productType": "wine",
         "wineType": "White",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -4845,18 +4646,27 @@
     "foodItems": [
       {
         "brand": "Taco Bell",
-        "product": "Locos Taco",
-        "category": "chips/snack",
-        "store": null,
+        "product": "Cool Ranch Doritos Los Taco Supreme",
+        "category": "meal",
+        "store": "Unknown",
         "price": null,
         "notes": null,
         "needsReview": false
       },
       {
         "brand": "Taco Bell",
-        "product": "(Taco Bell)",
-        "category": "fruit",
-        "store": null,
+        "product": "Double Decker Taco Supreme",
+        "category": "meal",
+        "store": "Unknown",
+        "price": null,
+        "notes": null,
+        "needsReview": false
+      },
+      {
+        "brand": "Taco Bell",
+        "product": "Carmel Apple Empanada",
+        "category": "sweet/dessert",
+        "store": "Unknown",
         "price": null,
         "notes": null,
         "needsReview": false
