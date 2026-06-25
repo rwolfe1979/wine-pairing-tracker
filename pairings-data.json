@@ -2221,7 +2221,7 @@
     "store": "Trader Joe's",
     "wineType": "Rosé",
     "wineImageUrl": "https://wolffer.com/cdn/shop/files/sib_long_island_2025.webp",
-    "foodImageUrl": "https://sporked.com/wp-content/uploads/2026/04/NPR_TRADER-JOES-BBQ-POTATO-CHIPS_HEADER.jpg",
+    "foodImageUrl": "https://www.traderjoes.com/content/dam/trjo/products/m21001/83368.png/jcr:content/renditions/webp-1280.webp",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Wölffer Estate Summer in a Bottle Long Island Rosé",
@@ -2232,9 +2232,9 @@
         "productType": "wine",
         "wineType": "Rosé",
         "store": "Trader Joe's",
-        "region": null,
-        "vintage": null,
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -2248,7 +2248,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
@@ -2257,7 +2257,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
