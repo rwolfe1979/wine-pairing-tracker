@@ -2176,22 +2176,25 @@ function buildExportData() {
     const origIdx = exportData.findIndex(p => p.id === postId);
     if (origIdx === -1) continue;
     const origPost = exportData[origIdx];
+    // Preserve original slide index so we can pull the matching image
     const splits = review.slides
-      ? (review.slides || []).filter(s => s?.action === 'pairing')
-      : (review.splits || []).map(s => ({ drinkItems:[{brand:null,product:s.wine||'Unknown',productType:'wine',wineType:s.wineType||'N/A',store:s.store||'Unknown',price:null,vintage:null,region:null,amount:null,notes:null,needsReview:false}], foodItems:[{brand:null,product:s.food||'Unknown',category:'other',store:s.store||'Unknown',price:null,notes:null,needsReview:false}] }));
+      ? (review.slides || []).map((s, si) => s?.action === 'pairing' ? {...s, _si: si} : null).filter(Boolean)
+      : (review.splits || []).map((s, si) => ({ _si: si, drinkItems:[{brand:null,product:s.wine||'Unknown',productType:'wine',wineType:s.wineType||'N/A',store:s.store||'Unknown',price:null,vintage:null,region:null,amount:null,notes:null,needsReview:false}], foodItems:[{brand:null,product:s.food||'Unknown',category:'other',store:s.store||'Unknown',price:null,notes:null,needsReview:false}] }));
     if (splits.length > 0) {
       exportData[origIdx] = Object.assign({}, origPost, { category: 'hidden' });
       const children = splits.map((s, i) => {
         const di = s.drinkItems || [];
         const fi = s.foodItems  || [];
         const name = di[0]?.product || 'Unknown';
+        const slideImg = origPost.slideshowImages?.[s._si] || null;
         return Object.assign({}, origPost, {
           id: postId + '_r' + i, originalPostId: postId,
           drinkName: name, drinkType: 'Wine', drinkItems: di, foodItems: fi,
           wine: name, food: fi.map(f=>f.product).filter(Boolean).join(' + ') || 'Unknown',
           store: di[0]?.store || fi[0]?.store || 'Unknown',
           wineType: di[0]?.wineType || 'N/A',
-          category: 'pairing', wineImageUrl: null, foodImageUrl: null,
+          category: 'pairing', wineImageUrl: slideImg, foodImageUrl: null,
+          isSlideshow: false, slideshowImages: [],
           isMultiPairingSplit: true,
         });
       });
