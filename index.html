@@ -806,6 +806,17 @@ body {
 .inbox-dot-green { background: #27AE60; }
 .inbox-dot-gray { background: #bbb; }
 .inbox-dot-current { outline: 2px solid var(--burgundy); outline-offset: 2px; }
+/* food rows */
+.inbox-foods { display: flex; flex-direction: column; gap: 4px; }
+.inbox-food-row { display: flex; gap: 6px; align-items: center; }
+.inbox-food-row .split-food { flex: 1; }
+.btn-link {
+  background: none; border: none; color: var(--burgundy);
+  font-size: 0.8rem; cursor: pointer; padding: 2px 0;
+  text-decoration: underline; text-underline-offset: 2px;
+  align-self: flex-start;
+}
+.btn-link:hover { opacity: 0.7; }
 /* form */
 .inbox-slide-form {
   padding: 10px 14px 0; display: flex; flex-direction: column; gap: 8px;
@@ -1828,7 +1839,14 @@ function buildInboxPost(p) {
   const cur = Math.min(inboxSlideIdx[postId] || 0, Math.max(0, slides.length - 1));
   const review = inboxReviews[postId] || {};
   const decisions = review.slides || [];
-  const addedPairings = decisions.filter(s => s?.action === 'pairing');
+  // Flatten all pairing decisions to {p, si, pi} for multi-food support
+  const allAdded = [];
+  decisions.forEach((slide, si) => {
+    if (slide?.action === 'pairing') {
+      const pairs = slide.pairings || (slide.wine ? [slide] : []);
+      pairs.forEach((p, pi) => allAdded.push({ p, si, pi }));
+    }
+  });
   const skippedCount = decisions.filter(s => s?.action === 'skip').length;
 
   // ── slide viewer ──
@@ -1850,7 +1868,7 @@ function buildInboxPost(p) {
     slideHtml = `<div class="inbox-slide-viewer">
       <div class="inbox-slide-nav-row">
         <button class="variant-btn inbox-nav-btn" onclick="navInboxSlide('${postId}',-1)">&#8249;</button>
-        <span class="inbox-slide-counter">Slide ${cur+1} of ${slides.length} &nbsp;·&nbsp; ${addedPairings.length} added, ${skippedCount} skipped</span>
+        <span class="inbox-slide-counter">Slide ${cur+1} of ${slides.length} &nbsp;·&nbsp; ${allAdded.length} added, ${skippedCount} skipped</span>
         <button class="variant-btn inbox-nav-btn" onclick="navInboxSlide('${postId}',1)">&#8250;</button>
       </div>
       <div class="inbox-slide-img-wrap">
@@ -1864,22 +1882,28 @@ function buildInboxPost(p) {
   }
 
   // ── form (pre-populated from current slide decision if any) ──
-  const dec = decisions[cur] || {};
-  const fw = escapeHtml(dec.wine || '');
-  const ff = escapeHtml(dec.food || '');
-  const fs = dec.store || 'Unknown';
-  const ft = dec.wineType || 'Unknown';
+  const dec = decisions[cur];
+  const decPairs = dec?.pairings || (dec?.wine ? [dec] : []);
+  const fw = escapeHtml(decPairs[0]?.wine || '');
+  const initFoods = decPairs.map(p => p.food || '').filter(Boolean);
+  if (initFoods.length === 0) initFoods.push('');
+  const fs = decPairs[0]?.store || 'Unknown';
+  const ft = decPairs[0]?.wineType || 'Unknown';
   const storeOpts = ["Unknown","Trader Joe's","Costco","Aldi"]
     .map(s => `<option${s===fs?' selected':''}>${s}</option>`).join('');
   const typeOpts = ["Unknown","Red","White","Rosé","Sparkling","Orange"]
     .map(t => `<option${t===ft?' selected':''}>${t}</option>`).join('');
+  const foodRowsHtml = initFoods.map(f =>
+    `<div class="inbox-food-row"><input class="split-food" list="foodAC" placeholder="Food / snack..." value="${escapeHtml(f)}"><button class="split-remove-btn" onclick="removeInboxFoodRow(this)" title="Remove">✕</button></div>`
+  ).join('');
 
   const formHtml = `<div class="inbox-slide-form">
     <div class="inbox-form-row">
       <input class="split-wine" id="inbox-wine-${postId}" list="wineAC" placeholder="Wine name..." value="${fw}">
-      <input class="split-food" id="inbox-food-${postId}" list="foodAC" placeholder="Food / snack..." value="${ff}">
     </div>
-    <div class="inbox-form-row">
+    <div class="inbox-foods" id="inbox-foods-${postId}">${foodRowsHtml}</div>
+    <button class="btn-link" onclick="addInboxFoodRow('${postId}')">+ add food</button>
+    <div class="inbox-form-row" style="margin-top:6px">
       <select class="split-store" id="inbox-store-${postId}">${storeOpts}</select>
       <select class="split-type" id="inbox-type-${postId}">${typeOpts}</select>
       <div class="inbox-form-actions">
@@ -1891,16 +1915,15 @@ function buildInboxPost(p) {
 
   // ── added pairings list ──
   let addedHtml = '';
-  if (addedPairings.length > 0) {
-    const rows = addedPairings.map(s => {
-      const si = decisions.indexOf(s);
-      return `<div class="inbox-added-row">
-        <span class="inbox-added-info">${escapeHtml(s.wine||'?')} + ${escapeHtml(s.food||'?')}${s.store&&s.store!=='Unknown'?' · '+s.store:''}</span>
-        <button class="split-remove-btn" onclick="removeInboxPairing('${postId}',${si})" title="Remove">✕</button>
-      </div>`;
-    }).join('');
+  if (allAdded.length > 0) {
+    const rows = allAdded.map(({ p, si, pi }) =>
+      `<div class="inbox-added-row">
+        <span class="inbox-added-info">${escapeHtml(p.wine||'?')} + ${escapeHtml(p.food||'?')}${p.store&&p.store!=='Unknown'?' · '+p.store:''}</span>
+        <button class="split-remove-btn" onclick="removeInboxPairing('${postId}',${si},${pi})" title="Remove">✕</button>
+      </div>`
+    ).join('');
     addedHtml = `<div class="inbox-added-list">
-      <div class="inbox-added-header">${addedPairings.length} pairing${addedPairings.length!==1?'s':''} added</div>
+      <div class="inbox-added-header">${allAdded.length} pairing${allAdded.length!==1?'s':''} added</div>
       ${rows}
     </div>`;
   }
@@ -1946,15 +1969,19 @@ function refreshInboxPost(postId) {
 
 function addInboxPairing(postId) {
   const wine = (document.getElementById('inbox-wine-'+postId)?.value || '').trim();
-  const food = (document.getElementById('inbox-food-'+postId)?.value || '').trim();
   const store = document.getElementById('inbox-store-'+postId)?.value || 'Unknown';
   const wineType = document.getElementById('inbox-type-'+postId)?.value || 'Unknown';
-  if (!wine && !food) { alert('Enter at least a wine name or food.'); return; }
+  const foods = Array.from(document.querySelectorAll('#inbox-foods-'+postId+' .split-food'))
+    .map(el => el.value.trim()).filter(Boolean);
+  if (!wine && foods.length === 0) { alert('Enter at least a wine name or food.'); return; }
   if (!inboxReviews[postId]) inboxReviews[postId] = {};
   if (!inboxReviews[postId].slides) inboxReviews[postId].slides = [];
   const slides = PAIRINGS_DATA.find(x => x.id === postId)?.slideshowImages || [];
   const cur = slides.length ? (inboxSlideIdx[postId] || 0) : inboxReviews[postId].slides.length;
-  inboxReviews[postId].slides[cur] = { action:'pairing', wine:wine||'Unknown', food:food||'Unknown', store, wineType };
+  const pairings = foods.length > 0
+    ? foods.map(food => ({ wine: wine || 'Unknown', food, store, wineType }))
+    : [{ wine: wine || 'Unknown', food: 'Unknown', store, wineType }];
+  inboxReviews[postId].slides[cur] = { action: 'pairing', pairings };
   saveInboxReviews();
   if (slides.length) advanceToNextUnreviewed(postId);
   refreshInboxPost(postId);
@@ -1970,11 +1997,35 @@ function skipInboxSlide(postId) {
   refreshInboxPost(postId);
 }
 
-function removeInboxPairing(postId, slideIdx) {
-  if (!inboxReviews[postId]?.slides) return;
-  inboxReviews[postId].slides[slideIdx] = null;
+function removeInboxPairing(postId, slideIdx, pairingIdx) {
+  const slide = inboxReviews[postId]?.slides?.[slideIdx];
+  if (!slide) return;
+  if (slide.pairings) {
+    slide.pairings.splice(pairingIdx, 1);
+    if (slide.pairings.length === 0) inboxReviews[postId].slides[slideIdx] = null;
+  } else {
+    inboxReviews[postId].slides[slideIdx] = null;
+  }
   saveInboxReviews();
   refreshInboxPost(postId);
+}
+
+function addInboxFoodRow(postId) {
+  const container = document.getElementById('inbox-foods-' + postId);
+  if (!container) return;
+  const div = document.createElement('div');
+  div.className = 'inbox-food-row';
+  div.innerHTML = '<input class="split-food" list="foodAC" placeholder="Food / snack..."><button class="split-remove-btn" onclick="removeInboxFoodRow(this)" title="Remove">✕</button>';
+  container.appendChild(div);
+  div.querySelector('input').focus();
+}
+
+function removeInboxFoodRow(btn) {
+  const container = btn.closest('.inbox-foods');
+  if (!container) return;
+  const rows = container.querySelectorAll('.inbox-food-row');
+  if (rows.length <= 1) { btn.previousElementSibling.value = ''; return; }
+  btn.closest('.inbox-food-row').remove();
 }
 
 function advanceToNextUnreviewed(postId) {
@@ -2024,7 +2075,7 @@ function exportInboxJSON() {
     const origPost = exportData[origIdx];
     // support both old .splits and new .slides model
     const splits = review.slides
-      ? (review.slides || []).filter(s => s?.action === 'pairing')
+      ? (review.slides || []).filter(s => s?.action === 'pairing').flatMap(s => s.pairings || (s.wine ? [{ wine: s.wine, food: s.food, store: s.store, wineType: s.wineType }] : []))
       : (review.splits || []);
 
     if (splits.length > 0) {
