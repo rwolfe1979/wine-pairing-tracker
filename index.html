@@ -1078,6 +1078,7 @@ body {
 <div class="controls">
   <div class="search-row">
     <input type="text" id="searchInput" placeholder="Search wine or food…" autocomplete="off">
+    <button onclick="publishToRepo(this)" style="white-space:nowrap;padding:8px 12px;font-size:0.82rem;background:var(--burgundy);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600" title="Publish edits & hides to app">🚀 Publish</button>
     <select class="sort-select" id="sortSelect">
       <option value="newest">Newest</option>
       <option value="oldest">Oldest</option>
@@ -1939,7 +1940,7 @@ function getInboxCount() {
 function buildExportBarHtml() {
   return `<div class="inbox-export-bar">
     <button class="btn-secondary" onclick="exportInboxJSON()">⬇ Export JSON</button>
-    <button class="btn-primary" id="publishBtn" onclick="publishToRepo()">🚀 Publish to App</button>
+    <button class="btn-primary" id="publishBtn" onclick="publishToRepo(this)">🚀 Publish to App</button>
     <button class="btn-link" onclick="openTokenSetup()" title="GitHub token" style="font-size:1rem;padding:4px 8px;margin-left:2px">⚙</button>
   </div>`;
 }
@@ -2243,7 +2244,7 @@ function markPostDone(postId) {
 }
 
 function buildExportData() {
-  let exportData = PAIRINGS_DATA.map(p => Object.assign({}, p));
+  let exportData = PAIRINGS_DATA.map(p => getEffectivePost(p.id)).filter(Boolean);
   for (const [postId, review] of Object.entries(inboxReviews)) {
     if (!review.done) continue;
     const origIdx = exportData.findIndex(p => p.id === postId);
@@ -2320,11 +2321,11 @@ function clearGitHubToken() {
   alert('Token cleared.');
 }
 
-async function publishToRepo() {
+async function publishToRepo(btnEl) {
   const token = localStorage.getItem(GITHUB_TOKEN_KEY);
   if (!token) { openTokenSetup(); return; }
 
-  const btn = document.getElementById('publishBtn');
+  const btn = btnEl || document.getElementById('publishBtn') || document.createElement('button');
   const origLabel = btn.textContent;
   btn.textContent = '⏳ Publishing…'; btn.disabled = true;
 
@@ -2363,6 +2364,10 @@ async function publishToRepo() {
     saveInboxReviews();
     hiddenOverrides.clear();
     saveHiddenOverrides();
+    const savedRatings = JSON.parse(localStorage.getItem(LS_KEY) || '{}');
+    Object.keys(savedRatings).forEach(id => { if (savedRatings[id]) delete savedRatings[id].editOverrides; });
+    localStorage.setItem(LS_KEY, JSON.stringify(savedRatings));
+    ratings = savedRatings;
     render(); renderPicks();
     btn.textContent = '✅ Published!';
     setTimeout(() => { btn.textContent = origLabel; btn.disabled = false; }, 3000);
