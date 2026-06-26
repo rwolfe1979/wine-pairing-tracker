@@ -3010,7 +3010,7 @@
     "wineType": "Red",
     "wineImageUrl": null,
     "foodImageUrl": null,
-    "category": "pairing",
+    "category": "hidden",
     "drinkType": "Wine",
     "drinkName": "Pinot Noir",
     "drinkItems": [
@@ -3277,7 +3277,7 @@
     "hashtags": [],
     "wine": "Cecilia Beretta Conegliano-Valdobbiadene Prosecco",
     "food": "Toasted Coconut Sheet Cake",
-    "store": "Unknown",
+    "store": "Trader Joe's",
     "wineType": "Sparkling",
     "wineImageUrl": "https://winestatistics.com/wp-content/uploads/2025/11/cecilia_beretta_coneglianovaldobbiadene_proseccosuperiore_brut_2023.png",
     "foodImageUrl": "https://sporked.com/wp-content/uploads/2026/02/NEWS_TRADER-JOES-COCONUT-MINI-SHEET-CAKE_HEADER.jpg",
@@ -3287,13 +3287,13 @@
     "drinkItems": [
       {
         "brand": "Cecilia Beretta",
-        "product": "Conegliano-Valdobbiadene Prosecco",
+        "product": "Conegliano-Valdobbiadene Prosecco Superiore Brut",
         "productType": "wine",
         "wineType": "Sparkling",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Trader Joe's",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -3301,13 +3301,13 @@
     ],
     "foodItems": [
       {
-        "brand": null,
+        "brand": "Trader Joe's",
         "product": "Toasted Coconut Sheet Cake",
-        "category": "chips/snack",
-        "store": null,
+        "category": "sweet/dessert",
+        "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -3859,7 +3859,7 @@
     "store": "Unknown",
     "wineType": "Red",
     "wineImageUrl": "https://woodencork.com/cdn/shop/products/338992_68c120c4-cae9-416f-8fbd-ae53fd3da343.jpg?v=1699066860&width=1080",
-    "foodImageUrl": "https://www.clubtraderjoes.com/wp-content/uploads/2012/01/TraderJoesMovieTheaterPopcornName.jpg",
+    "foodImageUrl": "https://www.recipetineats.com/uploads/2018/08/Movie-Popcorn_1.jpg",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Josh Cellars Pinot Noir",
@@ -3869,10 +3869,10 @@
         "product": "Pinot Noir",
         "productType": "wine",
         "wineType": "Red",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -3883,10 +3883,10 @@
         "brand": null,
         "product": "Buttered Popcorn",
         "category": "chips/snack",
-        "store": null,
+        "store": "Unknown",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -5168,7 +5168,7 @@
     "store": "Trader Joe's",
     "wineType": "White",
     "wineImageUrl": "http://costcowineblog.com/wp-content/uploads/2024/03/IMG_0050.jpg",
-    "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2022/09/Hot-Sweet-Pepper-Jelly.png",
+    "foodImageUrl": "https://cdn.shortpixel.ai/spai/w_728+q_glossy+ret_img+to_webp/sweetcaramelsunday.com/wp-content/uploads/Baked-brie-with-red-pepper-jelly-08.jpg",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Comte de la Chevalière Sancerre",
@@ -5179,9 +5179,9 @@
         "productType": "wine",
         "wineType": "White",
         "store": "Trader Joe's",
-        "region": null,
-        "vintage": null,
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -5195,7 +5195,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
@@ -5204,7 +5204,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
@@ -5213,7 +5213,7 @@
         "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
@@ -5233,7 +5233,7 @@
     "store": "Unknown",
     "wineType": "Red",
     "wineImageUrl": "https://images.squarespace-cdn.com/content/v1/5f6e966f5f74dc06edeeca1b/1615228400425-8HN45P4ER976ORO7B8QK/updatedcastorica+amarone.jpg",
-    "foodImageUrl": "https://traderjoeslist.com/wp-content/uploads/2024/09/Red-Leicester-Cheese.png",
+    "foodImageUrl": "https://www.traderjoes.com/content/dam/trjo/products/m20203/79569.png/jcr:content/renditions/webp-1280.webp",
     "category": "pairing",
     "drinkType": "Wine",
     "drinkName": "Ca'Storica Amarone della Valpolicella",
@@ -5243,10 +5243,10 @@
         "product": "Amarone della Valpolicella",
         "productType": "wine",
         "wineType": "Red",
-        "store": null,
-        "region": null,
-        "vintage": null,
+        "store": "Unknown",
         "price": null,
+        "vintage": null,
+        "region": null,
         "amount": null,
         "notes": null,
         "needsReview": false
@@ -5254,22 +5254,22 @@
     ],
     "foodItems": [
       {
-        "brand": null,
+        "brand": "Trader Joe's",
         "product": "Red Leicester Cheese",
         "category": "cheese",
-        "store": null,
+        "store": "Trader Joe's",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       },
       {
         "brand": null,
         "product": "Sugarbee Apple",
         "category": "fruit",
-        "store": null,
+        "store": "Unknown",
         "price": null,
         "notes": null,
-        "needsReview": true
+        "needsReview": false
       }
     ]
   },
